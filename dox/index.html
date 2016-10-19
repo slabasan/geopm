@@ -89,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2>WEB PAGE </h2>
 <p><a href="http://geopm.github.io/geopm">http://geopm.github.io/geopm</a></p>
 <h2>SUMMARY </h2>
-<p>Global Energy Optimization Power Management (GEOPM) is an extensible power management framework targeting high performance computing. The library can be extended to support new control algorithms and new hardware power management features. The GEOPM package provides built in features ranging from static management of power policy for each individual compute node, to dynamic coordination of power policy and performance across all of the compute nodes hosting one MPI job on a portion of a distributed computing system. The dynamic coordination is implemented as a hierarchical control system for scalable communication and decentralized control. The hierarchical control system can optimize for various objective functions including maximizing global application performance within a power bound. The root of the control hierarchy tree can communicate through shared memory with the system resource management daemon to extend the hierarchy above the individual MPI job level and enable management of system power resources for multiple MPI jobs and multiple users by the system resource manager. The geopm package provides the libgeopm library, the libgeopmpolicy library, the geopmctl application and the geopmpolicy application. The libgeopm library can be called within MPI applications to enable application feedback for informing the control decisions. If modification of the target application is not desired then the geopmctl application can be run concurrently with the target application. In this case, target application feedback is inferred by querying the hardware through Model Specific Registers (MSRs). With either method (libgeopm or geopmctl), the control hierarchy tree writes processor power policy through MSRs to enact policy decisions. The libgeopmpolicy library is used by a resource manager to set energy policy control parameters for MPI jobs. Some features of libgeopmpolicy are available through the geopmpolicy application including support for static control.</p>
+<p>Global Extensible Open Power Manager (GEOPM) is an extensible power management framework targeting high performance computing. The library can be extended to support new control algorithms and new hardware power management features. The GEOPM package provides built in features ranging from static management of power policy for each individual compute node, to dynamic coordination of power policy and performance across all of the compute nodes hosting one MPI job on a portion of a distributed computing system. The dynamic coordination is implemented as a hierarchical control system for scalable communication and decentralized control. The hierarchical control system can optimize for various objective functions including maximizing global application performance within a power bound. The root of the control hierarchy tree can communicate through shared memory with the system resource management daemon to extend the hierarchy above the individual MPI job level and enable management of system power resources for multiple MPI jobs and multiple users by the system resource manager. The geopm package provides the libgeopm library, the libgeopmpolicy library, the geopmctl application and the geopmpolicy application. The libgeopm library can be called within MPI applications to enable application feedback for informing the control decisions. If modification of the target application is not desired then the geopmctl application can be run concurrently with the target application. In this case, target application feedback is inferred by querying the hardware through Model Specific Registers (MSRs). With either method (libgeopm or geopmctl), the control hierarchy tree writes processor power policy through MSRs to enact policy decisions. The libgeopmpolicy library is used by a resource manager to set energy policy control parameters for MPI jobs. Some features of libgeopmpolicy are available through the geopmpolicy application including support for static control.</p>
 <h2>TRAVIS CI </h2>
 <p><a href="https://travis-ci.org/geopm/geopm">![Build Status](https://travis-ci.org/geopm/geopm.svg)</a></p>
 <p>The geopm public github project has been integrated with Travis continuous integration.</p>
@@ -156,57 +156,61 @@ make install
 <tr>
 <td><a class="el" href="_circular_buffer_8hpp.html">CircularBuffer.hpp</a> </td><td>27 </td><td>25 </td><td>93% </td></tr>
 <tr>
-<td><a class="el" href="_controller_8cpp.html">Controller.cpp</a> </td><td>369 </td><td>254 </td><td>69% </td></tr>
+<td><a class="el" href="_controller_8cpp.html">Controller.cpp</a> </td><td>462 </td><td>351 </td><td>76% </td></tr>
 <tr>
-<td><a class="el" href="_decider_8cpp.html">Decider.cpp</a> </td><td>6 </td><td>4 </td><td>67% </td></tr>
+<td><a class="el" href="_decider_8cpp.html">Decider.cpp</a> </td><td>21 </td><td>21 </td><td>100% </td></tr>
 <tr>
 <td><a class="el" href="_decider_8hpp.html">Decider.hpp</a> </td><td>1 </td><td>1 </td><td>100% </td></tr>
 <tr>
-<td><a class="el" href="_decider_factory_8cpp.html">DeciderFactory.cpp</a> </td><td>33 </td><td>29 </td><td>88% </td></tr>
+<td><a class="el" href="_decider_factory_8cpp.html">DeciderFactory.cpp</a> </td><td>34 </td><td>30 </td><td>88% </td></tr>
 <tr>
-<td><a class="el" href="_environment_8cpp.html">Environment.cpp</a> </td><td>52 </td><td>48 </td><td>92% </td></tr>
+<td><a class="el" href="_environment_8cpp.html">Environment.cpp</a> </td><td>72 </td><td>62 </td><td>86% </td></tr>
 <tr>
-<td><a class="el" href="_exception_8cpp.html">Exception.cpp</a> </td><td>100 </td><td>70 </td><td>70% </td></tr>
+<td><a class="el" href="_exception_8cpp.html">Exception.cpp</a> </td><td>127 </td><td>97 </td><td>76% </td></tr>
 <tr>
 <td><a class="el" href="_exception_8hpp.html">Exception.hpp</a> </td><td>1 </td><td>0 </td><td>0% </td></tr>
 <tr>
-<td><a class="el" href="_global_policy_8cpp.html">GlobalPolicy.cpp</a> </td><td>488 </td><td>380 </td><td>78% </td></tr>
+<td><a class="el" href="_global_policy_8cpp.html">GlobalPolicy.cpp</a> </td><td>574 </td><td>456 </td><td>79% </td></tr>
 <tr>
-<td>HSXPlatformImp.cpp </td><td>232 </td><td>175 </td><td>75% </td></tr>
+<td><a class="el" href="_k_n_l_platform_imp_8cpp.html">KNLPlatformImp.cpp</a> </td><td>335 </td><td>245 </td><td>73% </td></tr>
 <tr>
-<td>IVTPlatformImp.cpp </td><td>234 </td><td>177 </td><td>76% </td></tr>
+<td><a class="el" href="_platform_8cpp.html">Platform.cpp</a> </td><td>148 </td><td>80 </td><td>54% </td></tr>
 <tr>
-<td>LockingHashTable.hpp </td><td>140 </td><td>119 </td><td>85% </td></tr>
+<td><a class="el" href="_platform_factory_8cpp.html">PlatformFactory.cpp</a> </td><td>78 </td><td>63 </td><td>80% </td></tr>
 <tr>
-<td>Observation.cpp </td><td>87 </td><td>75 </td><td>86% </td></tr>
+<td><a class="el" href="_platform_imp_8cpp.html">PlatformImp.cpp</a> </td><td>224 </td><td>197 </td><td>88% </td></tr>
 <tr>
-<td><a class="el" href="_platform_8cpp.html">Platform.cpp</a> </td><td>187 </td><td>77 </td><td>41% </td></tr>
-<tr>
-<td><a class="el" href="_platform_factory_8cpp.html">PlatformFactory.cpp</a> </td><td>83 </td><td>64 </td><td>77% </td></tr>
-<tr>
-<td><a class="el" href="_platform_imp_8cpp.html">PlatformImp.cpp</a> </td><td>113 </td><td>91 </td><td>81% </td></tr>
-<tr>
-<td><a class="el" href="_platform_topology_8cpp.html">PlatformTopology.cpp</a> </td><td>31 </td><td>21 </td><td>68% </td></tr>
+<td><a class="el" href="_platform_topology_8cpp.html">PlatformTopology.cpp</a> </td><td>33 </td><td>29 </td><td>88% </td></tr>
 <tr>
 <td><a class="el" href="_policy_8cpp.html">Policy.cpp</a> </td><td>130 </td><td>130 </td><td>100% </td></tr>
 <tr>
-<td><a class="el" href="_policy_flags_8cpp.html">PolicyFlags.cpp</a> </td><td>77 </td><td>67 </td><td>87% </td></tr>
+<td><a class="el" href="_policy_flags_8cpp.html">PolicyFlags.cpp</a> </td><td>78 </td><td>67 </td><td>86% </td></tr>
 <tr>
-<td><a class="el" href="_profile_8cpp.html">Profile.cpp</a> </td><td>442 </td><td>319 </td><td>72% </td></tr>
+<td><a class="el" href="_profile_8cpp.html">Profile.cpp</a> </td><td>431 </td><td>356 </td><td>88% </td></tr>
 <tr>
 <td><a class="el" href="_profile_thread_8cpp.html">ProfileThread.cpp</a> </td><td>45 </td><td>0 </td><td>0% </td></tr>
 <tr>
-<td><a class="el" href="_r_a_p_l_platform_8cpp.html">RAPLPlatform.cpp</a> </td><td>96 </td><td>88 </td><td>92% </td></tr>
+<td><a class="el" href="_r_a_p_l_platform_8cpp.html">RAPLPlatform.cpp</a> </td><td>149 </td><td>136 </td><td>91% </td></tr>
 <tr>
-<td><a class="el" href="_region_8cpp.html">Region.cpp</a> </td><td>233 </td><td>240 </td><td>97% </td></tr>
+<td><a class="el" href="_region_8cpp.html">Region.cpp</a> </td><td>267 </td><td>260 </td><td>97% </td></tr>
 <tr>
 <td><a class="el" href="_sample_regulator_8cpp.html">SampleRegulator.cpp</a> </td><td>77 </td><td>76 </td><td>99% </td></tr>
 <tr>
 <td><a class="el" href="_sample_scheduler_8cpp.html">SampleScheduler.cpp</a> </td><td>39 </td><td>35 </td><td>90% </td></tr>
 <tr>
-<td><a class="el" href="_shared_memory_8cpp.html">SharedMemory.cpp</a> </td><td>93 </td><td>58 </td><td>62% </td></tr>
+<td><a class="el" href="_shared_memory_8cpp.html">SharedMemory.cpp</a> </td><td>101 </td><td>65 </td><td>64% </td></tr>
 <tr>
-<td><a class="el" href="_tree_communicator_8cpp.html">TreeCommunicator.cpp</a> </td><td>262 </td><td>220 </td><td>84% </td></tr>
+<td><a class="el" href="_signal_handler_8cpp.html">SignalHandler.cpp</a> </td><td>57 </td><td>53 </td><td>93% </td></tr>
+<tr>
+<td><a class="el" href="_static_policy_decider_8cpp.html">StaticPolicyDecider.cpp</a> </td><td>13 </td><td>11 </td><td>85% </td></tr>
+<tr>
+<td><a class="el" href="_static_policy_decider_8hpp.html">StaticPolicyDecider.hpp</a> </td><td>1 </td><td>1 </td><td>100% </td></tr>
+<tr>
+<td><a class="el" href="_tracer_8cpp.html">Tracer.cpp</a> </td><td>39 </td><td>14 </td><td>36% </td></tr>
+<tr>
+<td><a class="el" href="_tree_communicator_8cpp.html">TreeCommunicator.cpp</a> </td><td>286 </td><td>250 </td><td>87% </td></tr>
+<tr>
+<td><a class="el" href="_xeon_platform_imp_8cpp.html">XeonPlatformImp.cpp</a> </td><td>353 </td><td>245 </td><td>69% </td></tr>
 <tr>
 <td><a class="el" href="geopm__ctl__spawn_8c.html">geopm_ctl_spawn.c</a> </td><td>2 </td><td>0 </td><td>0% </td></tr>
 <tr>
@@ -218,23 +222,23 @@ make install
 <tr>
 <td><a class="el" href="geopm__omp_8c.html">geopm_omp.c</a> </td><td>11 </td><td>0 </td><td>0% </td></tr>
 <tr>
-<td><a class="el" href="geopm__plugin_8c.html">geopm_plugin.c</a> </td><td>36 </td><td>33 </td><td>92% </td></tr>
+<td><a class="el" href="geopm__plugin_8c.html">geopm_plugin.c</a> </td><td>37 </td><td>34 </td><td>92% </td></tr>
 <tr>
-<td><a class="el" href="geopm__pmpi_8c.html">geopm_pmpi.c</a> </td><td>458 </td><td>111 </td><td>24% </td></tr>
+<td><a class="el" href="geopm__pmpi_8c.html">geopm_pmpi.c</a> </td><td>479 </td><td>105 </td><td>22% </td></tr>
 <tr>
-<td><a class="el" href="geopm__time_8h.html">geopm_time.h</a> </td><td>10 </td><td>10 </td><td>100% </td></tr>
+<td><a class="el" href="geopm__time_8h.html">geopm_time.h</a> </td><td>19 </td><td>17 </td><td>90% </td></tr>
 <tr>
-<td><a class="el" href="geopm__version_8c.html">geopm_version.c</a> </td><td>2 </td><td>0 </td><td>0% </td></tr>
+<td><a class="el" href="geopm__version_8c.html">geopm_version.c</a> </td><td>2 </td><td>2 </td><td>100% </td></tr>
 <tr>
-<td><a class="el" href="_balancing_decider_8cpp.html">BalancingDecider.cpp</a> </td><td>68 </td><td>63 </td><td>93% </td></tr>
+<td><a class="el" href="_balancing_decider_8cpp.html">BalancingDecider.cpp</a> </td><td>102 </td><td>75 </td><td>74% </td></tr>
 <tr>
 <td><a class="el" href="_balancing_decider_8hpp.html">BalancingDecider.hpp</a> </td><td>1 </td><td>1 </td><td>100% </td></tr>
 <tr>
-<td><a class="el" href="_governing_decider_8cpp.html">GoverningDecider.cpp</a> </td><td>75 </td><td>67 </td><td>89% </td></tr>
+<td><a class="el" href="_governing_decider_8cpp.html">GoverningDecider.cpp</a> </td><td>88 </td><td>17 </td><td>19% </td></tr>
 <tr>
 <td><a class="el" href="_governing_decider_8hpp.html">GoverningDecider.hpp</a> </td><td>1 </td><td>1 </td><td>100% </td></tr>
 <tr>
-<td>TOTAL </td><td>4373 </td><td>3152 </td><td>72% </td></tr>
+<td>TOTAL </td><td>4994 </td><td>3631 </td><td>73% </td></tr>
 </table>
 <h2>ACKNOWLEDGMENTS </h2>
 <p>Development of the GEOPM software package has been partially funded through contract B609815 with Argonne National Laboratory. </p>
