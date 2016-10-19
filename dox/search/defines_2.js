@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['u_5fshort',['u_short',['../geopm__plugin_8c.html#ab89b0350a4213b1dee3daebf4d196f7f',1,'geopm_plugin.c']]]
+  ['x86_5fioc_5fmsr_5fbatch',['X86_IOC_MSR_BATCH',['../_platform_imp_8hpp.html#a8ce491cc352ba20417574aaa20d52701',1,'PlatformImp.hpp']]]
 ];

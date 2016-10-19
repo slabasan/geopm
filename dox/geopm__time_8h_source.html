@@ -173,51 +173,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec += elapsed;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    elapsed -= floor(elapsed);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_nsec += 1E9 * elapsed;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="structgeopm__time__s.html">   91</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgeopm__time__s.html">geopm_time_s</a> {</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">   92</a></span>&#160;    <span class="keyword">struct </span>timeval <a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> geopm_time(<span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *time)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> gettimeofday((<span class="keyword">struct</span> timeval *)time, NULL);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">double</span> geopm_time_diff(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *begin, <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *end)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> (end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec - begin-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec) +</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;           (end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec - begin-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec) * 1E-6;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> geopm_time_comp(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *aa, <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *bb)</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">bool</span> result = aa-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec &lt; bb-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> (!result &amp;&amp; aa-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec == bb-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        result = aa-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec &lt; bb-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> geopm_time_add(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *begin, <span class="keywordtype">double</span> elapsed, <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *end)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    *end = *begin;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec += elapsed;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    elapsed -= floor(elapsed);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec += 1E6 * elapsed;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_nsec &gt;= 1000000000) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_nsec -= 1000000000;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        ++(end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="structgeopm__time__s.html">   95</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgeopm__time__s.html">geopm_time_s</a> {</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">   96</a></span>&#160;    <span class="keyword">struct </span>timeval <a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> geopm_time(<span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *time)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">return</span> gettimeofday((<span class="keyword">struct</span> timeval *)time, NULL);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">double</span> geopm_time_diff(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *begin, <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *end)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> (end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec - begin-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec) +</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;           (end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec - begin-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec) * 1E-6;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> geopm_time_comp(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *aa, <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *bb)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">bool</span> result = aa-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec &lt; bb-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> (!result &amp;&amp; aa-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec == bb-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        result = aa-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec &lt; bb-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> geopm_time_add(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *begin, <span class="keywordtype">double</span> elapsed, <span class="keyword">struct</span> <a class="code" href="structgeopm__time__s.html">geopm_time_s</a> *end)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    *end = *begin;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_sec += elapsed;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    elapsed -= floor(elapsed);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    end-&gt;<a class="code" href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">t</a>.tv_usec += 1E6 * elapsed;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structgeopm__time__s_html"><div class="ttname"><a href="structgeopm__time__s.html">geopm_time_s</a></div><div class="ttdoc">structure to abstract the difference between a timespec on linux or a timeval on OSX. </div><div class="ttdef"><b>Definition:</b> geopm_time.h:91</div></div>
-<div class="ttc" id="structgeopm__time__s_html_a69112ff3a601269da02aa4cd6bd38997"><div class="ttname"><a href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">geopm_time_s::t</a></div><div class="ttdeci">struct timeval t</div><div class="ttdef"><b>Definition:</b> geopm_time.h:92</div></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structgeopm__time__s_html"><div class="ttname"><a href="structgeopm__time__s.html">geopm_time_s</a></div><div class="ttdoc">structure to abstract the difference between a timespec on linux or a timeval on OSX. </div><div class="ttdef"><b>Definition:</b> geopm_time.h:95</div></div>
+<div class="ttc" id="structgeopm__time__s_html_a69112ff3a601269da02aa4cd6bd38997"><div class="ttname"><a href="structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997">geopm_time_s::t</a></div><div class="ttdeci">struct timeval t</div><div class="ttdef"><b>Definition:</b> geopm_time.h:96</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

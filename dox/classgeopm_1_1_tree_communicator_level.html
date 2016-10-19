@@ -148,8 +148,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9779608c7d53269c4b7a49df25caf7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65725592fab28c822568a803fa16f9d0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator_level.html#a65725592fab28c822568a803fa16f9d0">m_sample_mailbox</a></td></tr>
 <tr class="separator:a65725592fab28c822568a803fa16f9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7efd914833744412942e31fa56a82ab"><td class="memItemLeft" align="right" valign="top">std::vector&lt; MPI_Request &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator_level.html#ac7efd914833744412942e31fa56a82ab">m_sample_request</a></td></tr>
-<tr class="separator:ac7efd914833744412942e31fa56a82ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ce7abdfa3097fa88f42f61e32e07a3"><td class="memItemLeft" align="right" valign="top">MPI_Win&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator_level.html#a69ce7abdfa3097fa88f42f61e32e07a3">m_sample_window</a></td></tr>
+<tr class="separator:a69ce7abdfa3097fa88f42f61e32e07a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78571209b749e2b41f59f9f8e9cb460e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator_level.html#a78571209b749e2b41f59f9f8e9cb460e">m_policy_mailbox</a></td></tr>
 <tr class="separator:a78571209b749e2b41f59f9f8e9cb460e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68e957ccb2960d09216bf8ea1924e41f"><td class="memItemLeft" align="right" valign="top">MPI_Request&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator_level.html#a68e957ccb2960d09216bf8ea1924e41f">m_policy_request</a></td></tr>
@@ -331,7 +331,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Send policy via <a class="el" href="geopm__pmpi_8c.html#af86285ef7f1b2779c74c480ac1e7193d">MPI_Irsend()</a> to all children, skip if no recieve has been posted. </p>
+<p>Send policy via <a class="el" href="geopm__pmpi_8c.html#a5321d122506b3314d84ddcf62d19fba6">MPI_Isend()</a> to all children, skip if no recieve has been posted. </p>
 
 </div>
 </div>
@@ -348,7 +348,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Send sample via <a class="el" href="geopm__pmpi_8c.html#af86285ef7f1b2779c74c480ac1e7193d">MPI_Irsend()</a> to root of level, skip if no recieve has been posted. </p>
+<p>Send sample via <a class="el" href="geopm__pmpi_8c.html#a5321d122506b3314d84ddcf62d19fba6">MPI_Isend()</a> to root of level, skip if no recieve has been posted. </p>
 
 </div>
 </div>
@@ -513,7 +513,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac7efd914833744412942e31fa56a82ab"></a>
+<a class="anchor" id="a69ce7abdfa3097fa88f42f61e32e07a3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -521,7 +521,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;MPI_Request&gt; geopm::TreeCommunicatorLevel::m_sample_request</td>
+          <td class="memname">MPI_Win geopm::TreeCommunicatorLevel::m_sample_window</td>
         </tr>
       </table>
   </td>

@@ -89,104 +89,135 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classgeopm_1_1_profile_table-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">geopm::ProfileTable Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classgeopm_1_1_profile_table.html" title="ProfileTable class is a specific instantiation of the LockingHashTable class for dealing with applica...">ProfileTable</a> class is a specific instantiation of the <a class="el" href="classgeopm_1_1_locking_hash_table.html" title="Templated container for multi-threaded or multi-process producer consumer data exchange. ">LockingHashTable</a> class for dealing with application profile data.  
+<p>Container for multi-threaded or multi-process producer consumer data exchange.  
  <a href="classgeopm_1_1_profile_table.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_profile_8hpp_source.html">Profile.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for geopm::ProfileTable:</div>
-<div class="dyncontent">
-<div class="center"><img src="classgeopm_1_1_profile_table__inherit__graph.png" border="0" usemap="#geopm_1_1_profile_table_inherit__map" alt="Inheritance graph"/></div>
-<map name="geopm_1_1_profile_table_inherit__map" id="geopm_1_1_profile_table_inherit__map">
-<area shape="rect" id="node2" href="classgeopm_1_1_locking_hash_table.html" title="geopm::LockingHashTable\l\&lt; struct geopm_prof_message_s \&gt;" alt="" coords="5,5,233,44"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="_profile_table_8hpp_source.html">ProfileTable.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for geopm::ProfileTable:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_profile_table__coll__graph.png" border="0" usemap="#geopm_1_1_profile_table_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_profile_table_coll__map" id="geopm_1_1_profile_table_coll__map">
-<area shape="rect" id="node2" href="classgeopm_1_1_locking_hash_table.html" title="geopm::LockingHashTable\l\&lt; struct geopm_prof_message_s \&gt;" alt="" coords="5,105,233,144"/>
-<area shape="rect" id="node3" href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="30,5,208,44"/>
+<area shape="rect" id="node2" href="structgeopm_1_1_profile_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="20,179,159,217"/>
+<area shape="rect" id="node3" href="structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="5,92,173,117"/>
+<area shape="rect" id="node4" href="structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="35,5,144,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm_1_1_profile_table_1_1table__entry__s.html">table_entry_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to hold state for a single table entry.  <a href="structgeopm_1_1_profile_table_1_1table__entry__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac38ef18ea542f30af586c15d60d6cbff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#ac38ef18ea542f30af586c15d60d6cbff">ProfileTable</a> (size_t <a class="el" href="classgeopm_1_1_locking_hash_table.html#a083b721cd56ed567727b00e9d7fd0c84">size</a>, void *buffer)</td></tr>
+<tr class="memitem:ac38ef18ea542f30af586c15d60d6cbff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#ac38ef18ea542f30af586c15d60d6cbff">ProfileTable</a> (size_t <a class="el" href="classgeopm_1_1_profile_table.html#a976daae6709a0508cf2eb4e0e8bc2eee">size</a>, void *buffer)</td></tr>
+<tr class="memdesc:ac38ef18ea542f30af586c15d60d6cbff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a>.  <a href="#ac38ef18ea542f30af586c15d60d6cbff">More...</a><br /></td></tr>
 <tr class="separator:ac38ef18ea542f30af586c15d60d6cbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae44a433e6b9be281d237881d63fb5591"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#ae44a433e6b9be281d237881d63fb5591">~ProfileTable</a> ()</td></tr>
+<tr class="memdesc:ae44a433e6b9be281d237881d63fb5591"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a> destructor, virtual.  <a href="#ae44a433e6b9be281d237881d63fb5591">More...</a><br /></td></tr>
 <tr class="separator:ae44a433e6b9be281d237881d63fb5591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a23ed8dddc75ab03866bfe3b183b81"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a19a23ed8dddc75ab03866bfe3b183b81">key</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a19a23ed8dddc75ab03866bfe3b183b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash the name string into a random 64 bit integer.  <a href="#a19a23ed8dddc75ab03866bfe3b183b81">More...</a><br /></td></tr>
+<tr class="separator:a19a23ed8dddc75ab03866bfe3b183b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dfaeea3100033a1fd80dc9d74a32133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a7dfaeea3100033a1fd80dc9d74a32133">insert</a> (uint64_t <a class="el" href="classgeopm_1_1_profile_table.html#a19a23ed8dddc75ab03866bfe3b183b81">key</a>, const struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &amp;value)</td></tr>
+<tr class="memdesc:a7dfaeea3100033a1fd80dc9d74a32133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a value into the table.  <a href="#a7dfaeea3100033a1fd80dc9d74a32133">More...</a><br /></td></tr>
+<tr class="separator:a7dfaeea3100033a1fd80dc9d74a32133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa98c5525983af80806b62c020b6b67"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#aeaa98c5525983af80806b62c020b6b67">find</a> (uint64_t <a class="el" href="classgeopm_1_1_profile_table.html#a19a23ed8dddc75ab03866bfe3b183b81">key</a>)</td></tr>
+<tr class="memdesc:aeaa98c5525983af80806b62c020b6b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the data associated with the key.  <a href="#aeaa98c5525983af80806b62c020b6b67">More...</a><br /></td></tr>
+<tr class="separator:aeaa98c5525983af80806b62c020b6b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb6dba206be0cac365802ebf7d9817d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#aadb6dba206be0cac365802ebf7d9817d">capacity</a> (void) const </td></tr>
+<tr class="memdesc:aadb6dba206be0cac365802ebf7d9817d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of entries the table can hold.  <a href="#aadb6dba206be0cac365802ebf7d9817d">More...</a><br /></td></tr>
+<tr class="separator:aadb6dba206be0cac365802ebf7d9817d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976daae6709a0508cf2eb4e0e8bc2eee"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a976daae6709a0508cf2eb4e0e8bc2eee">size</a> (void) const </td></tr>
+<tr class="separator:a976daae6709a0508cf2eb4e0e8bc2eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9414322b97427eda65fcf04312ed787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#af9414322b97427eda65fcf04312ed787">dump</a> (std::vector&lt; std::pair&lt; uint64_t, struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &gt; &gt;::iterator content, size_t &amp;length)</td></tr>
+<tr class="memdesc:af9414322b97427eda65fcf04312ed787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all table entries into a vector and delete all entries.  <a href="#af9414322b97427eda65fcf04312ed787">More...</a><br /></td></tr>
+<tr class="separator:af9414322b97427eda65fcf04312ed787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652d97ed405c6b6973b564a93a37f509"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a652d97ed405c6b6973b564a93a37f509">name_fill</a> (size_t header_offset)</td></tr>
+<tr class="memdesc:a652d97ed405c6b6973b564a93a37f509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the producer to pass names to the consumer.  <a href="#a652d97ed405c6b6973b564a93a37f509">More...</a><br /></td></tr>
+<tr class="separator:a652d97ed405c6b6973b564a93a37f509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad28944ddd142586f7c315ba0da6c805b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#ad28944ddd142586f7c315ba0da6c805b">name_set</a> (size_t header_offset, std::set&lt; std::string &gt; &amp;name)</td></tr>
+<tr class="memdesc:ad28944ddd142586f7c315ba0da6c805b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the consumer to receive the names that hash to the keys.  <a href="#ad28944ddd142586f7c315ba0da6c805b">More...</a><br /></td></tr>
+<tr class="separator:ad28944ddd142586f7c315ba0da6c805b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:aa933a443fbad091c6606350caa5eec0b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classgeopm_1_1_profile_table.html#aa933a443fbad091c6606350caa5eec0bad0f8f251837f1ec97b6e5f6422c32d43">M_TABLE_DEPTH_MAX</a> = 16
+ }<tr class="separator:aa933a443fbad091c6606350caa5eec0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
 <tr class="memitem:a359146c2b1d4368e606ab758fa0888c7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a359146c2b1d4368e606ab758fa0888c7">sticky</a> (const struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &amp;value)</td></tr>
 <tr class="separator:a359146c2b1d4368e606ab758fa0888c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classgeopm_1_1_locking_hash_table"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgeopm_1_1_locking_hash_table')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classgeopm_1_1_locking_hash_table.html">geopm::LockingHashTable&lt; struct geopm_prof_message_s &gt;</a></td></tr>
-<tr class="memitem:a87495c9825486aaa9e69475e3184af49 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a87495c9825486aaa9e69475e3184af49">LockingHashTable</a> (size_t <a class="el" href="classgeopm_1_1_locking_hash_table.html#a083b721cd56ed567727b00e9d7fd0c84">size</a>, void *buffer)</td></tr>
-<tr class="memdesc:a87495c9825486aaa9e69475e3184af49 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the LockingHashTable template.  <a href="#a87495c9825486aaa9e69475e3184af49">More...</a><br /></td></tr>
-<tr class="separator:a87495c9825486aaa9e69475e3184af49 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22b7743c2157294c1a8e3de73ae32206 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a22b7743c2157294c1a8e3de73ae32206">~LockingHashTable</a> ()</td></tr>
-<tr class="memdesc:a22b7743c2157294c1a8e3de73ae32206 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">LockingHashTable destructor, virtual.  <a href="#a22b7743c2157294c1a8e3de73ae32206">More...</a><br /></td></tr>
-<tr class="separator:a22b7743c2157294c1a8e3de73ae32206 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac37a748e51f287418726c1162dddb283 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#ac37a748e51f287418726c1162dddb283">key</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:ac37a748e51f287418726c1162dddb283 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash the name string into a random 64 bit integer.  <a href="#ac37a748e51f287418726c1162dddb283">More...</a><br /></td></tr>
-<tr class="separator:ac37a748e51f287418726c1162dddb283 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a950a82d4b686efb7f0d7f0ece6649619 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a950a82d4b686efb7f0d7f0ece6649619">insert</a> (uint64_t <a class="el" href="classgeopm_1_1_locking_hash_table.html#ac37a748e51f287418726c1162dddb283">key</a>, const struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &amp;value)</td></tr>
-<tr class="memdesc:a950a82d4b686efb7f0d7f0ece6649619 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a value into the table.  <a href="#a950a82d4b686efb7f0d7f0ece6649619">More...</a><br /></td></tr>
-<tr class="separator:a950a82d4b686efb7f0d7f0ece6649619 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c905ee51c74e54656f8092c4967d666 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a1c905ee51c74e54656f8092c4967d666">find</a> (uint64_t <a class="el" href="classgeopm_1_1_locking_hash_table.html#ac37a748e51f287418726c1162dddb283">key</a>)</td></tr>
-<tr class="memdesc:a1c905ee51c74e54656f8092c4967d666 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the data associated with the key.  <a href="#a1c905ee51c74e54656f8092c4967d666">More...</a><br /></td></tr>
-<tr class="separator:a1c905ee51c74e54656f8092c4967d666 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a102a414c443114e4db63458e1019215e inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a102a414c443114e4db63458e1019215e">capacity</a> (void) const</td></tr>
-<tr class="memdesc:a102a414c443114e4db63458e1019215e inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of entries the table can hold.  <a href="#a102a414c443114e4db63458e1019215e">More...</a><br /></td></tr>
-<tr class="separator:a102a414c443114e4db63458e1019215e inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a083b721cd56ed567727b00e9d7fd0c84 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a083b721cd56ed567727b00e9d7fd0c84">size</a> (void) const</td></tr>
-<tr class="separator:a083b721cd56ed567727b00e9d7fd0c84 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeee8e97724e289d543340ac5bca72fc6 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#aeee8e97724e289d543340ac5bca72fc6">dump</a> (typename std::vector&lt; std::pair&lt; uint64_t, struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &gt; &gt;::iterator content, size_t &amp;length)</td></tr>
-<tr class="memdesc:aeee8e97724e289d543340ac5bca72fc6 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all table entries into a vector and delete all entries.  <a href="#aeee8e97724e289d543340ac5bca72fc6">More...</a><br /></td></tr>
-<tr class="separator:aeee8e97724e289d543340ac5bca72fc6 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09faf78315a2cb373888bde477cf8698 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a09faf78315a2cb373888bde477cf8698">name_fill</a> (size_t header_offset)</td></tr>
-<tr class="memdesc:a09faf78315a2cb373888bde477cf8698 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the producer to pass names to the consumer.  <a href="#a09faf78315a2cb373888bde477cf8698">More...</a><br /></td></tr>
-<tr class="separator:a09faf78315a2cb373888bde477cf8698 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98141b9d5efdeb0a1f615059335a5936 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a98141b9d5efdeb0a1f615059335a5936">name_set</a> (size_t header_offset, std::set&lt; std::string &gt; &amp;name)</td></tr>
-<tr class="memdesc:a98141b9d5efdeb0a1f615059335a5936 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the consumer to receive the names that hash to the keys.  <a href="#a98141b9d5efdeb0a1f615059335a5936">More...</a><br /></td></tr>
-<tr class="separator:a98141b9d5efdeb0a1f615059335a5936 inherit pub_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2853f4d86eee9820b1ec640dd8d36db9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a2853f4d86eee9820b1ec640dd8d36db9">hash</a> (uint64_t <a class="el" href="classgeopm_1_1_profile_table.html#a19a23ed8dddc75ab03866bfe3b183b81">key</a>) const </td></tr>
+<tr class="separator:a2853f4d86eee9820b1ec640dd8d36db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60aa1d7d61e8e15d2c62d1e7c8a09038"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a60aa1d7d61e8e15d2c62d1e7c8a09038">table_length</a> (size_t buffer_size) const </td></tr>
+<tr class="separator:a60aa1d7d61e8e15d2c62d1e7c8a09038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classgeopm_1_1_locking_hash_table"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classgeopm_1_1_locking_hash_table')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classgeopm_1_1_locking_hash_table.html">geopm::LockingHashTable&lt; struct geopm_prof_message_s &gt;</a></td></tr>
-<tr class="memitem:abd9169f4ba7a25bd3b9d3d958c84ddff inherit pro_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#abd9169f4ba7a25bd3b9d3d958c84ddff">hash</a> (uint64_t <a class="el" href="classgeopm_1_1_locking_hash_table.html#ac37a748e51f287418726c1162dddb283">key</a>) const</td></tr>
-<tr class="separator:abd9169f4ba7a25bd3b9d3d958c84ddff inherit pro_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0130f4c53999fc7a4197716840e9543b inherit pro_methods_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a0130f4c53999fc7a4197716840e9543b">table_length</a> (size_t buffer_size) const</td></tr>
-<tr class="separator:a0130f4c53999fc7a4197716840e9543b inherit pro_methods_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classgeopm_1_1_locking_hash_table"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classgeopm_1_1_locking_hash_table')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classgeopm_1_1_locking_hash_table.html">geopm::LockingHashTable&lt; struct geopm_prof_message_s &gt;</a></td></tr>
-<tr class="memitem:ae58271629ea06e3c75d25c84364e87ce inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#ae58271629ea06e3c75d25c84364e87ce">m_buffer_size</a></td></tr>
-<tr class="separator:ae58271629ea06e3c75d25c84364e87ce inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a496a0cfd9edd2462398d245cc3d7c9 inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a2a496a0cfd9edd2462398d245cc3d7c9">m_table_length</a></td></tr>
-<tr class="separator:a2a496a0cfd9edd2462398d245cc3d7c9 inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a821d6f2ffcad9ddb3147395d51612cae inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a821d6f2ffcad9ddb3147395d51612cae">m_mask</a></td></tr>
-<tr class="separator:a821d6f2ffcad9ddb3147395d51612cae inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f4a287806cbc567ae1827bc73458dbb inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">struct table_entry_s *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a1f4a287806cbc567ae1827bc73458dbb">m_table</a></td></tr>
-<tr class="separator:a1f4a287806cbc567ae1827bc73458dbb inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecbf3ac59fb5510c0e03c3011c9e7e3a inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#aecbf3ac59fb5510c0e03c3011c9e7e3a">m_key_map_lock</a></td></tr>
-<tr class="separator:aecbf3ac59fb5510c0e03c3011c9e7e3a inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e5b415b100dad08b18c96caf7262d79 inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">std::map&lt; const std::string, uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a9e5b415b100dad08b18c96caf7262d79">m_key_map</a></td></tr>
-<tr class="separator:a9e5b415b100dad08b18c96caf7262d79 inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac512880bd1c9ee9b63cfe1a8292e752 inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">std::set&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#aac512880bd1c9ee9b63cfe1a8292e752">m_key_set</a></td></tr>
-<tr class="separator:aac512880bd1c9ee9b63cfe1a8292e752 inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa215e7cdf1a89813b10db348ad42b2f inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#aaa215e7cdf1a89813b10db348ad42b2f">m_is_pshared</a></td></tr>
-<tr class="separator:aaa215e7cdf1a89813b10db348ad42b2f inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc51e9329bf0c1e27409fd392dbee2d inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memItemLeft" align="right" valign="top">std::map&lt; const std::string, uint64_t &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a1bc51e9329bf0c1e27409fd392dbee2d">m_key_map_last</a></td></tr>
-<tr class="separator:a1bc51e9329bf0c1e27409fd392dbee2d inherit pro_attribs_classgeopm_1_1_locking_hash_table"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac4d3380917b57f5c64674191c9303254"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#ac4d3380917b57f5c64674191c9303254">m_buffer_size</a></td></tr>
+<tr class="separator:ac4d3380917b57f5c64674191c9303254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f8a51df6d8af731557e4607743eb2f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a01f8a51df6d8af731557e4607743eb2f">m_table_length</a></td></tr>
+<tr class="separator:a01f8a51df6d8af731557e4607743eb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e36578d2f062fbae2d63c258bd6f9a6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a7e36578d2f062fbae2d63c258bd6f9a6">m_mask</a></td></tr>
+<tr class="separator:a7e36578d2f062fbae2d63c258bd6f9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b61b7a3abfbd27cedc1778053249b2"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm_1_1_profile_table_1_1table__entry__s.html">table_entry_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a40b61b7a3abfbd27cedc1778053249b2">m_table</a></td></tr>
+<tr class="separator:a40b61b7a3abfbd27cedc1778053249b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142e57fda35031e12970f7074ef6d13b"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a142e57fda35031e12970f7074ef6d13b">m_key_map_lock</a></td></tr>
+<tr class="separator:a142e57fda35031e12970f7074ef6d13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87d98a596e5ea66f57f768c151df622b"><td class="memItemLeft" align="right" valign="top">std::map&lt; const std::string, uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a87d98a596e5ea66f57f768c151df622b">m_key_map</a></td></tr>
+<tr class="separator:a87d98a596e5ea66f57f768c151df622b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8630fde77c6f345345e4a90d4013b11e"><td class="memItemLeft" align="right" valign="top">std::set&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a8630fde77c6f345345e4a90d4013b11e">m_key_set</a></td></tr>
+<tr class="separator:a8630fde77c6f345345e4a90d4013b11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0097e76490f9f70f2455e0d69b9cdd48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#a0097e76490f9f70f2455e0d69b9cdd48">m_is_pshared</a></td></tr>
+<tr class="separator:a0097e76490f9f70f2455e0d69b9cdd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f1915a3e831a7726451ad8371f9652"><td class="memItemLeft" align="right" valign="top">std::map&lt; const std::string, uint64_t &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_table.html#ae7f1915a3e831a7726451ad8371f9652">m_key_map_last</a></td></tr>
+<tr class="separator:ae7f1915a3e831a7726451ad8371f9652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classgeopm_1_1_profile_table.html" title="ProfileTable class is a specific instantiation of the LockingHashTable class for dealing with applica...">ProfileTable</a> class is a specific instantiation of the <a class="el" href="classgeopm_1_1_locking_hash_table.html" title="Templated container for multi-threaded or multi-process producer consumer data exchange. ">LockingHashTable</a> class for dealing with application profile data. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p>Container for multi-threaded or multi-process producer consumer data exchange. </p>
+<p>The <a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a> container uses a block of virtual address space to support producer consumer data access. The table is intended to support references which are registered once and used multiple times. The registering of a reference requires a string name as input and provides a randomized hash of the string to an unsigned 64 bit integer key. The key is then used for subsequent references to the struct <a class="el" href="structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. ">geopm_prof_message_s</a> supported by the container. The <a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a> is optimized for many writers and one reader who scans the entire table by calling <a class="el" href="classgeopm_1_1_profile_table.html#af9414322b97427eda65fcf04312ed787" title="Copy all table entries into a vector and delete all entries. ">ProfileTable::dump()</a>, however it can support other use cases as well. The buffer that is used to store the data is provided at creation time. This buffer can have any number of operating system memory policies applied including inter-process shared memory. See the <a class="el" href="classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter-process shared memory. ">geopm::SharedMemory</a> class for information on usage with POSIX inter-process shared memory. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="aa933a443fbad091c6606350caa5eec0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa933a443fbad091c6606350caa5eec0bad0f8f251837f1ec97b6e5f6422c32d43"></a>M_TABLE_DEPTH_MAX&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac38ef18ea542f30af586c15d60d6cbff"></a>
 <div class="memitem">
 <div class="memproto">
@@ -211,6 +242,16 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor for the <a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a>. </p>
+<p>The memory that is used by the container is provided at construction time. There are other ancillary data associated with the structure which are dynamic, but the data container is of fixed size.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>[in] The length of the buffer in bytes.</td></tr>
+    <tr><td class="paramname">buffer</td><td>[in] Pointer to beginning of virtual address range used for storing the data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ae44a433e6b9be281d237881d63fb5591"></a>
@@ -234,9 +275,257 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a> destructor, virtual. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aadb6dba206be0cac365802ebf7d9817d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t geopm::ProfileTable::capacity </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of entries the table can hold. </p>
+<p>Returns the upper bound on the number of values that can be stored in the table. This can be used to size the content vector passed to the <a class="el" href="classgeopm_1_1_profile_table.html#af9414322b97427eda65fcf04312ed787" title="Copy all table entries into a vector and delete all entries. ">dump()</a> method. In general there will be many fewer entries into the table than the number returned by <a class="el" href="classgeopm_1_1_profile_table.html#aadb6dba206be0cac365802ebf7d9817d" title="Maximum number of entries the table can hold. ">capacity()</a> before a <a class="el" href="classgeopm_1_1_exception.html" title="Class for all geopm specific exceptions. ">geopm::Exception</a> with error_value() of GEOPM_TOO_MANY_COLLISIONS is thrown at time of insertion.</p>
+<dl class="section return"><dt>Returns</dt><dd>The maximum number of entries the table can hold. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af9414322b97427eda65fcf04312ed787"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileTable::dump </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; uint64_t, struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &gt; &gt;::iterator&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy all table entries into a vector and delete all entries. </p>
+<p>This method is used by the data consumer to empty the table of all posted contents into a vector. When the table is used in this way it serves as a temporary scratch-pad for relaying messages from the producer to the consumer. Note that the content vector is not re-sized and it should be sized according to the value returned by <a class="el" href="classgeopm_1_1_profile_table.html#aadb6dba206be0cac365802ebf7d9817d" title="Maximum number of entries the table can hold. ">capacity()</a>. Only the first "length" elements of the vector will be written to by <a class="el" href="classgeopm_1_1_profile_table.html#af9414322b97427eda65fcf04312ed787" title="Copy all table entries into a vector and delete all entries. ">dump()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">content</td><td>The vector of key value pairs copied out of the table.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">length</td><td>The number of entries copied into the content vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aeaa98c5525983af80806b62c020b6b67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> geopm::ProfileTable::find </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a copy of the data associated with the key. </p>
+<p>Used to access a specific element of data from the table without deleting the entry. If there is no data associated with the key or the data has been deleted by a call to <a class="el" href="classgeopm_1_1_profile_table.html#af9414322b97427eda65fcf04312ed787" title="Copy all table entries into a vector and delete all entries. ">dump()</a> then a <a class="el" href="classgeopm_1_1_exception.html" title="Class for all geopm specific exceptions. ">geopm::Exception</a> is thrown with an error_value() of GEOPM_ERROR_INVALID.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The integer returned by <a class="el" href="classgeopm_1_1_profile_table.html#a19a23ed8dddc75ab03866bfe3b183b81" title="Hash the name string into a random 64 bit integer. ">key()</a> when the name was registered. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2853f4d86eee9820b1ec640dd8d36db9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t geopm::ProfileTable::hash </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7dfaeea3100033a1fd80dc9d74a32133"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileTable::insert </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert a value into the table. </p>
+<p>Once the name has been registered with a call to <a class="el" href="classgeopm_1_1_profile_table.html#a19a23ed8dddc75ab03866bfe3b183b81" title="Hash the name string into a random 64 bit integer. ">key()</a> the data associated with the name can be inserted into the table by the producer using this function. If there is already a value associated with the key then the value will be overwritten. There is a fixed number of collisions allowed, and if too many keys hashed to the same entry in the table, the entry will be emptied of it's current data which will be lost.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The value returned by <a class="el" href="classgeopm_1_1_profile_table.html#a19a23ed8dddc75ab03866bfe3b183b81" title="Hash the name string into a random 64 bit integer. ">key()</a> when the name was registered.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Entry that is to be inserted into the table.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the 64 bit hash used to reference the name in other <a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a> methods. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a19a23ed8dddc75ab03866bfe3b183b81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t geopm::ProfileTable::key </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hash the name string into a random 64 bit integer. </p>
+<p>Uses the <a class="el" href="geopm__hash_8c.html#a3618c5db703759ced79117700cb41024">geopm_crc32_str()</a> function to hash the name which will modify the lower 32 bits. The remaining 32 bits may be used for other purposes in the future. Subsequent calls to hash the same string will use a string to integer std::map rather than re-hashing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>String which is to be mapped to the key. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a652d97ed405c6b6973b564a93a37f509"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool geopm::ProfileTable::name_fill </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>header_offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called by the producer to pass names to the consumer. </p>
+<p>When this method is called the data producer will pass the names that have been thus far been passed to <a class="el" href="classgeopm_1_1_profile_table.html#a19a23ed8dddc75ab03866bfe3b183b81" title="Hash the name string into a random 64 bit integer. ">key()</a> through the buffer to the consumer who will call <a class="el" href="classgeopm_1_1_profile_table.html#ad28944ddd142586f7c315ba0da6c805b" title="Called by the consumer to receive the names that hash to the keys. ">name_set()</a> to receive the names. There is an option to avoid writing to the beginning of the buffer so that it can be reserved for passing other information. If the header_offset is zero then the entire buffer is used. This call will block until the consumer calls <a class="el" href="classgeopm_1_1_profile_table.html#ad28944ddd142586f7c315ba0da6c805b" title="Called by the consumer to receive the names that hash to the keys. ">name_set()</a>.</p>
+<p>NOTE: The <a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a> cannot be used again after a call to <a class="el" href="classgeopm_1_1_profile_table.html#a652d97ed405c6b6973b564a93a37f509" title="Called by the producer to pass names to the consumer. ">name_fill()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">header_offset</td><td>Offset in bytes to where the name values will start in the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad28944ddd142586f7c315ba0da6c805b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool geopm::ProfileTable::name_set </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>header_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called by the consumer to receive the names that hash to the keys. </p>
+<p>Through calling <a class="el" href="classgeopm_1_1_profile_table.html#af9414322b97427eda65fcf04312ed787" title="Copy all table entries into a vector and delete all entries. ">dump()</a> the consumer will receive a set of integer keys. This method enables the consumer to learn the names that can be hashed to the keys it has received. There is an option to avoid writing to the beginning of the buffer so that it can be reserved for passing other information. If the header_offset is zero then the entire buffer is used. This call will block until the producer calls <a class="el" href="classgeopm_1_1_profile_table.html#a652d97ed405c6b6973b564a93a37f509" title="Called by the producer to pass names to the consumer. ">name_fill()</a>.</p>
+<p>NOTE: The <a class="el" href="classgeopm_1_1_profile_table.html" title="Container for multi-threaded or multi-process producer consumer data exchange. ">ProfileTable</a> cannot be used again after a call to <a class="el" href="classgeopm_1_1_profile_table.html#ad28944ddd142586f7c315ba0da6c805b" title="Called by the consumer to receive the names that hash to the keys. ">name_set()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">header_offset</td><td>Offset in bytes to where the name values will start in the buffer.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">name</td><td>Set of names read from output of the producer's call to <a class="el" href="classgeopm_1_1_profile_table.html#a652d97ed405c6b6973b564a93a37f509" title="Called by the producer to pass names to the consumer. ">name_fill()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a976daae6709a0508cf2eb4e0e8bc2eee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t geopm::ProfileTable::size </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a359146c2b1d4368e606ab758fa0888c7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -254,18 +543,221 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classgeopm_1_1_locking_hash_table.html#a63a1e62d3c241276441e03d049e01922">geopm::LockingHashTable&lt; struct geopm_prof_message_s &gt;</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a60aa1d7d61e8e15d2c62d1e7c8a09038"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t geopm::ProfileTable::table_length </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buffer_size</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ac4d3380917b57f5c64674191c9303254"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t geopm::ProfileTable::m_buffer_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0097e76490f9f70f2455e0d69b9cdd48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool geopm::ProfileTable::m_is_pshared</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a87d98a596e5ea66f57f768c151df622b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;const std::string, uint64_t&gt; geopm::ProfileTable::m_key_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae7f1915a3e831a7726451ad8371f9652"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;const std::string, uint64_t&gt;::iterator geopm::ProfileTable::m_key_map_last</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a142e57fda35031e12970f7074ef6d13b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t geopm::ProfileTable::m_key_map_lock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8630fde77c6f345345e4a90d4013b11e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;uint64_t&gt; geopm::ProfileTable::m_key_set</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7e36578d2f062fbae2d63c258bd6f9a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t geopm::ProfileTable::m_mask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a40b61b7a3abfbd27cedc1778053249b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structgeopm_1_1_profile_table_1_1table__entry__s.html">table_entry_s</a>* geopm::ProfileTable::m_table</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a01f8a51df6d8af731557e4607743eb2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t geopm::ProfileTable::m_table_length</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="_profile_8hpp_source.html">Profile.hpp</a></li>
-<li>src/<a class="el" href="_profile_8cpp.html">Profile.cpp</a></li>
+<li>src/<a class="el" href="_profile_table_8hpp_source.html">ProfileTable.hpp</a></li>
+<li>src/<a class="el" href="_profile_table_8cpp.html">ProfileTable.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

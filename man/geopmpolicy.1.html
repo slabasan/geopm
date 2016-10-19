@@ -130,7 +130,7 @@ whitelist output ends with a name describing the register as derived from the
 Intel (R) Software Developer's Manual.  Please cross-reference Intel (R)
 Software Developer's Manual to get details about the security implications of
 the whitelist before enabling user access.</p></dd>
-<dt class="flush"><code>-m</code> mode</dt><dd><p><br /> Power management mode, must be one of those described in the <a href="#MODES" title="MODES" data-bare-link="true">MODES</a> section
+<dt class="flush"><code>-m</code> mode</dt><dd><p>Power management mode, must be one of those described in the <a href="#MODES" title="MODES" data-bare-link="true">MODES</a> section
 below.  The static modes do not require the geopm runtime to be running
 concurrently with the primary computational application, where as dynamic
 modes do have a runtime requirement on geopm.</p></dd>
@@ -169,10 +169,10 @@ cases this will match the OpenMP environment. All other keys are ignored.</p></d
 <dt><code>perf_balance_dynamic</code></dt><dd><p>Implements the GEOPM_MODE_PERF_BALANCE_DYNAMIC mode described in the
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> man page in the <code>DYNAMIC MODES</code> section.  The
 only key required to be passed to the <code>-d</code> flag is the <em>power_budget</em>
-which is the power budget in units of Watts for all compute nodes
-allocated to the job. Optional keys that can be set are the <em>tree_decider</em>,
-<em>leaf_decider</em>, and the <em>platform</em> keys which are used to select custom
-plugins. All other keys are ignored.</p></dd>
+which is the average per-node power budget in units of Watts for each
+compute node allocated to the job. Optional keys that can be set are
+the <em>tree_decider</em>, <em>leaf_decider</em>, and the <em>platform</em> keys which are
+used to select custom plugins. All other keys are ignored.</p></dd>
 <dt><code>freq_uniform_dynamic</code></dt><dd><p>Implements the GEOPM_MODE_FREQ_UNIFORM_DYNAMIC mode described in the
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>  man page in the <code>DYNAMIC MODES</code> section.  The
 only key required to be passed to the <code>-d</code> flag is the <em>power_budget</em>
@@ -200,17 +200,17 @@ ignored.</p></dd>
 <dt>Create a configuration file which disables power management with RAPL:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m tdp_balance_static \ <br />
 -d tdp_percent:100</p></dd>
 <dt>Create a configuration file for a fixed frequency of 1.5 GHz:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m freq_uniform_static \ <br />
--d cpu_freq:1500</p></dd>
+-d cpu_mhz:1500</p></dd>
 <dt>Create a configuration file for a hybrid frequency of 2.5 GHz where 4 cores are unconstrained and using scatter distribution:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m freq_hybrid_static \ <br />
--d cpu_freq:2500,num_cpu_max_perf:4,affinity:scatter</p></dd>
+-d cpu_mhz:2500,num_cpu_max_perf:4,affinity:scatter</p></dd>
 <dt>Create a configuration file for all processors to run at 75% of the Thermal Design Power:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m tdp_balance_static \ <br />
 -d tdp_percent:75</p></dd>
-<dt>Create a configuration file for global energy optimization with a power budget of 1 MWatt:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
--d power_budget:1000000</p></dd>
-<dt>Create a configuration file for global energy optimization with a power budget of 1 MWatt and use a custom platform plugin:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
--d power_budget:1000000,platform:broadwell_platform</p></dd>
-<dt>Create a configuration file for global energy optimization with a power budget of 1 MWatt and use custom decider plugins:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
--d power_budget:1000000,tree_decider:uniform_frequency,leaf_decider:max_efficiency</p></dd>
+<dt>Create a configuration file for global energy optimization with a per-node power budget of 300 Watts:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
+-d power_budget:300</p></dd>
+<dt>Create a configuration file for global energy optimization with a per-node power budget of 300 Watts and use a custom platform plugin:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
+-d power_budget:300,platform:broadwell_platform</p></dd>
+<dt>Create a configuration file for global energy optimization with a per-node power budget of 300 Watts and use custom decider plugins:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m dynamic \ <br />
+-d power_budget:300,tree_decider:uniform_frequency,leaf_decider:max_efficiency</p></dd>
 <dt>Enforce a static policy defined in a preexisting configuration file:</dt><dd><p>$ geopmpolicy -e -f geopm.conf</p></dd>
 <dt>Enforce a static policy where all processors to run at 75% of the Thermal Design Power:</dt><dd><p>$ geopmpolicy -e -m tdp_balance_static -d tdp_percent:75</p></dd>
 <dt>Save off the current state of the system MSRs:</dt><dd><p>$ geopmpolicy -s -f geopm_restore.log</p></dd>
@@ -226,7 +226,6 @@ ignored.</p></dd>
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
 <p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
-<strong><a class="man-ref" href="geopm_comm.3.html">geopm_comm<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_fortran.3.html">geopm_fortran<span class="s">(3)</span></a></strong>,
@@ -240,7 +239,7 @@ ignored.</p></dd>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>May 2016</li>
+    <li class='tc'>October 2016</li>
     <li class='tr'>geopmpolicy(1)</li>
   </ol>
 

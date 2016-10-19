@@ -128,9 +128,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d4bbaac6c2f4b4ba85db1dc92f7dc81"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgeopm_1_1_decider.html">Decider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_static_policy_decider.html#a8d4bbaac6c2f4b4ba85db1dc92f7dc81">clone</a> (void) const </td></tr>
 <tr class="memdesc:a8d4bbaac6c2f4b4ba85db1dc92f7dc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a pointer of the derived class, virtual.  <a href="#a8d4bbaac6c2f4b4ba85db1dc92f7dc81">More...</a><br /></td></tr>
 <tr class="separator:a8d4bbaac6c2f4b4ba85db1dc92f7dc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0233368c709dee4fe135e3e2d4b0838"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_static_policy_decider.html#ae0233368c709dee4fe135e3e2d4b0838">update_policy</a> (const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy_msg, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;curr_policy)</td></tr>
-<tr class="memdesc:ae0233368c709dee4fe135e3e2d4b0838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the power split among power control domains when recieving a new global budget, vitual.  <a href="#ae0233368c709dee4fe135e3e2d4b0838">More...</a><br /></td></tr>
-<tr class="separator:ae0233368c709dee4fe135e3e2d4b0838"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa97a4fcd821ca71cd5277a23222ba6fb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_static_policy_decider.html#aa97a4fcd821ca71cd5277a23222ba6fb">update_policy</a> (<a class="el" href="classgeopm_1_1_region.html">Region</a> &amp;curr_region, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;curr_policy)</td></tr>
 <tr class="memdesc:aa97a4fcd821ca71cd5277a23222ba6fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a new power policy for the region based on telemery data, virtual.  <a href="#aa97a4fcd821ca71cd5277a23222ba6fb">More...</a><br /></td></tr>
 <tr class="separator:aa97a4fcd821ca71cd5277a23222ba6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +144,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeecdc00a0f6aab4f13b020d4d61696e5 inherit pub_methods_classgeopm_1_1_decider"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#aeecdc00a0f6aab4f13b020d4d61696e5">~Decider</a> ()</td></tr>
 <tr class="memdesc:aeecdc00a0f6aab4f13b020d4d61696e5 inherit pub_methods_classgeopm_1_1_decider"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> destructor, virtual.  <a href="#aeecdc00a0f6aab4f13b020d4d61696e5">More...</a><br /></td></tr>
 <tr class="separator:aeecdc00a0f6aab4f13b020d4d61696e5 inherit pub_methods_classgeopm_1_1_decider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa4526a8d88c5082fa0255029f5d622 inherit pub_methods_classgeopm_1_1_decider"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a2aa4526a8d88c5082fa0255029f5d622">bound</a> (double upper_bound, double lower_bound)</td></tr>
+<tr class="memdesc:a2aa4526a8d88c5082fa0255029f5d622 inherit pub_methods_classgeopm_1_1_decider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the upper and lower control bounds. For a power based control, this will be the upper and lower power bounds of a single tree node below the current one. For a frequency based control this will be the p-state bounds of a single leaf node.  <a href="#a2aa4526a8d88c5082fa0255029f5d622">More...</a><br /></td></tr>
+<tr class="separator:a2aa4526a8d88c5082fa0255029f5d622 inherit pub_methods_classgeopm_1_1_decider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d139375ddf051b32c08637eecddc621 inherit pub_methods_classgeopm_1_1_decider"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a5d139375ddf051b32c08637eecddc621">update_policy</a> (const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy_msg, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;curr_policy)</td></tr>
+<tr class="memdesc:a5d139375ddf051b32c08637eecddc621 inherit pub_methods_classgeopm_1_1_decider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the power split among power control domains when recieving a new global budget, vitual.  <a href="#a5d139375ddf051b32c08637eecddc621">More...</a><br /></td></tr>
+<tr class="separator:a5d139375ddf051b32c08637eecddc621 inherit pub_methods_classgeopm_1_1_decider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_classgeopm_1_1_decider"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classgeopm_1_1_decider')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classgeopm_1_1_decider.html">geopm::Decider</a></td></tr>
+<tr class="memitem:ae0889db94b3214ea5a5f62499afdc61a inherit pub_attribs_classgeopm_1_1_decider"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#ae0889db94b3214ea5a5f62499afdc61a">m_last_power_budget</a></td></tr>
+<tr class="memdesc:ae0889db94b3214ea5a5f62499afdc61a inherit pub_attribs_classgeopm_1_1_decider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the last known power budget.  <a href="#ae0889db94b3214ea5a5f62499afdc61a">More...</a><br /></td></tr>
+<tr class="separator:ae0889db94b3214ea5a5f62499afdc61a inherit pub_attribs_classgeopm_1_1_decider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6da643c77ef78fbf7188f48f5a1cb6e inherit pub_attribs_classgeopm_1_1_decider"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#aa6da643c77ef78fbf7188f48f5a1cb6e">m_upper_bound</a></td></tr>
+<tr class="memdesc:aa6da643c77ef78fbf7188f48f5a1cb6e inherit pub_attribs_classgeopm_1_1_decider"><td class="mdescLeft">&#160;</td><td class="mdescRight">The upper control bound;.  <a href="#aa6da643c77ef78fbf7188f48f5a1cb6e">More...</a><br /></td></tr>
+<tr class="separator:aa6da643c77ef78fbf7188f48f5a1cb6e inherit pub_attribs_classgeopm_1_1_decider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f8a4907cbfe867555f7b2fcc8aef03 inherit pub_attribs_classgeopm_1_1_decider"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a19f8a4907cbfe867555f7b2fcc8aef03">m_lower_bound</a></td></tr>
+<tr class="memdesc:a19f8a4907cbfe867555f7b2fcc8aef03 inherit pub_attribs_classgeopm_1_1_decider"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lower control bound;.  <a href="#a19f8a4907cbfe867555f7b2fcc8aef03">More...</a><br /></td></tr>
+<tr class="separator:a19f8a4907cbfe867555f7b2fcc8aef03 inherit pub_attribs_classgeopm_1_1_decider"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> which does not update the policy. </p>
@@ -276,44 +292,6 @@ Public Member Functions</h2></td></tr>
 <p>Return the name of the decider, virtual. </p>
 
 <p>Implements <a class="el" href="classgeopm_1_1_decider.html#a0dfc0c04fd7ae5e81aafb0782e13e921">geopm::Decider</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae0233368c709dee4fe135e3e2d4b0838"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool geopm::StaticPolicyDecider::update_policy </td>
-          <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;&#160;</td>
-          <td class="paramname"><em>policy_msg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;&#160;</td>
-          <td class="paramname"><em>curr_policy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the power split among power control domains when recieving a new global budget, vitual. </p>
-
-<p>Reimplemented from <a class="el" href="classgeopm_1_1_decider.html#a5d139375ddf051b32c08637eecddc621">geopm::Decider</a>.</p>
 
 </div>
 </div>

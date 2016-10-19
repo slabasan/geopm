@@ -114,8 +114,10 @@ Collaboration diagram for geopm::Platform:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_platform__coll__graph.png" border="0" usemap="#geopm_1_1_platform_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_platform_coll__map" id="geopm_1_1_platform_coll__map">
-<area shape="rect" id="node2" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="21,92,162,117"/>
-<area shape="rect" id="node3" href="classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="5,5,178,31"/>
+<area shape="rect" id="node2" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="146,205,287,231"/>
+<area shape="rect" id="node3" href="structgeopm_1_1_platform_imp_1_1m__msr__batch__array.html" title="geopm::PlatformImp\l::m_msr_batch_array" alt="" coords="5,105,153,144"/>
+<area shape="rect" id="node4" href="structgeopm_1_1_platform_imp_1_1m__msr__batch__op.html" title="geopm::PlatformImp\l::m_msr_batch_op" alt="" coords="8,5,150,44"/>
+<area shape="rect" id="node5" href="classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="177,112,349,137"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -153,6 +155,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af259ffe831d041f4c18bf44f4e055c18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#af259ffe831d041f4c18bf44f4e055c18">write_msr_whitelist</a> (FILE *file_desc) const </td></tr>
 <tr class="memdesc:af259ffe831d041f4c18bf44f4e055c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a MSR whitelist for use with the Linux MSR driver.  <a href="#af259ffe831d041f4c18bf44f4e055c18">More...</a><br /></td></tr>
 <tr class="separator:af259ffe831d041f4c18bf44f4e055c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc26ec4fe2ac12f9bcc019bd19b441a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a7bc26ec4fe2ac12f9bcc019bd19b441a">revert_msr_state</a> (void) const </td></tr>
+<tr class="memdesc:a7bc26ec4fe2ac12f9bcc019bd19b441a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revert the MSR values to their initial state.  <a href="#a7bc26ec4fe2ac12f9bcc019bd19b441a">More...</a><br /></td></tr>
+<tr class="separator:a7bc26ec4fe2ac12f9bcc019bd19b441a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3739a00a50bd9849be35f05ca739e9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#aea3739a00a50bd9849be35f05ca739e9">control_domain</a> (void)=0</td></tr>
+<tr class="memdesc:aea3739a00a50bd9849be35f05ca739e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the domain of control;.  <a href="#aea3739a00a50bd9849be35f05ca739e9">More...</a><br /></td></tr>
+<tr class="separator:aea3739a00a50bd9849be35f05ca739e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b1d029b201b926fecd10c75e0a0b7b"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a84b1d029b201b926fecd10c75e0a0b7b">capacity</a> (void)=0</td></tr>
 <tr class="memdesc:a84b1d029b201b926fecd10c75e0a0b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of MSR values returned from <a class="el" href="classgeopm_1_1_platform.html#adb22f194d2e6169264a903161632ec07" title="Record telemetry from counters and RAPL MSRs. ">sample()</a>.  <a href="#a84b1d029b201b926fecd10c75e0a0b7b">More...</a><br /></td></tr>
 <tr class="separator:a84b1d029b201b926fecd10c75e0a0b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +173,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a086a490850553278b90a2988d9dc555a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a086a490850553278b90a2988d9dc555a">enforce_policy</a> (uint64_t region_id, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;policy) const  =0</td></tr>
 <tr class="memdesc:a086a490850553278b90a2988d9dc555a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforce a static power management mode including tdp_balance_static, freq_uniform_static, and freq_hybrid_static.  <a href="#a086a490850553278b90a2988d9dc555a">More...</a><br /></td></tr>
 <tr class="separator:a086a490850553278b90a2988d9dc555a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a7e47736283c755415fdba252ff1cf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ae5a7e47736283c755415fdba252ff1cf">bound</a> (double &amp;upper_bound, double &amp;lower_bound)=0</td></tr>
+<tr class="memdesc:ae5a7e47736283c755415fdba252ff1cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the upper and lower bounds of the control.  <a href="#ae5a7e47736283c755415fdba252ff1cf">More...</a><br /></td></tr>
+<tr class="separator:ae5a7e47736283c755415fdba252ff1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6d975868dcc4f15b48658a7bb7834f2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ad6d975868dcc4f15b48658a7bb7834f2">topology</a> (void) const </td></tr>
 <tr class="memdesc:ad6d975868dcc4f15b48658a7bb7834f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the topology of the current platform.  <a href="#ad6d975868dcc4f15b48658a7bb7834f2">More...</a><br /></td></tr>
 <tr class="separator:ad6d975868dcc4f15b48658a7bb7834f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,6 +201,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a311dadb92ab256034349369c9a56acde"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a311dadb92ab256034349369c9a56acde">m_control_domain_type</a></td></tr>
 <tr class="memdesc:a311dadb92ab256034349369c9a56acde"><td class="mdescLeft">&#160;</td><td class="mdescRight">The geopm_domain_type_e of the finest domain of control on the hw platform.  <a href="#a311dadb92ab256034349369c9a56acde">More...</a><br /></td></tr>
 <tr class="separator:a311dadb92ab256034349369c9a56acde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f6cdaf68c2da4ea3c1e2a22b6b7b85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ad4f6cdaf68c2da4ea3c1e2a22b6b7b85">m_num_energy_domain</a></td></tr>
+<tr class="separator:ad4f6cdaf68c2da4ea3c1e2a22b6b7b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520436403127941e24975b106223164d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a520436403127941e24975b106223164d">m_num_counter_domain</a></td></tr>
+<tr class="separator:a520436403127941e24975b106223164d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7267851af8971707d9a33c589657d052"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a7267851af8971707d9a33c589657d052">m_rank_cpu</a></td></tr>
 <tr class="memdesc:a7267851af8971707d9a33c589657d052"><td class="mdescLeft">&#160;</td><td class="mdescRight">The matrix that transforms the per package, per-cpu, and per-rank signals into the domain of control.  <a href="#a7267851af8971707d9a33c589657d052">More...</a><br /></td></tr>
 <tr class="separator:a7267851af8971707d9a33c589657d052"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,6 +279,52 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae5a7e47736283c755415fdba252ff1cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void geopm::Platform::bound </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>upper_bound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>lower_bound</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the upper and lower bounds of the control. </p>
+<p>For a RAPL platform this would be the package power limit, for a frequency platform this would be the p-state bounds.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">upper_bound</td><td>The upper control bound.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">lower_bound</td><td>The lower control bound. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#ad014376725314fe4e346010a135d71d5">geopm::RAPLPlatform</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a84b1d029b201b926fecd10c75e0a0b7b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -289,6 +350,34 @@ Protected Attributes</h2></td></tr>
 <p>Number of MSR values returned from <a class="el" href="classgeopm_1_1_platform.html#adb22f194d2e6169264a903161632ec07" title="Record telemetry from counters and RAPL MSRs. ">sample()</a>. </p>
 
 <p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#ab9d0588d2a1b0259597e13db2766dac8">geopm::RAPLPlatform</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aea3739a00a50bd9849be35f05ca739e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int geopm::Platform::control_domain </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the domain of control;. </p>
+
+<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#ae17020074b7fc4638e31dbc11c80bf03">geopm::RAPLPlatform</a>.</p>
 
 </div>
 </div>
@@ -546,6 +635,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7bc26ec4fe2ac12f9bcc019bd19b441a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Platform::revert_msr_state </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Revert the MSR values to their initial state. </p>
+
+</div>
+</div>
 <a class="anchor" id="adb22f194d2e6169264a903161632ec07"></a>
 <div class="memitem">
 <div class="memproto">
@@ -716,7 +823,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>assumes domain of control is the package </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>assumes domain of control is the package </dd></dl>
 
 </div>
 </div>
@@ -789,6 +896,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a520436403127941e24975b106223164d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Platform::m_num_counter_domain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ac89adc8aa4d421d1f1c742ef2ab3c864"></a>
 <div class="memitem">
 <div class="memproto">
@@ -808,6 +935,26 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The number of power domains. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad4f6cdaf68c2da4ea3c1e2a22b6b7b85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Platform::m_num_energy_domain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -80,36 +80,21 @@
 <p><code>Link with -lgeopm</code></p>
 
 <dl>
-<dt><code>int geopm_prof_create(</code></dt><dd><p><code>const char *</code><em>name</em>, <br />
-<code>const char *</code><em>shm_key</em>, <br />
-<code>MPI_Comm</code> <em>comm</em>, <br />
-<code>struct geopm_prof_c **</code><em>prof</em>);</p></dd>
-<dt><code>int geopm_prof_destroy(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>);</p></dd>
-<dt><code>int geopm_prof_default(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>);</p></dd>
-<dt><code>int geopm_prof_region(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
-<code>const char *</code><em>region_name</em>, <br />
+<dt><code>int geopm_prof_region(</code></dt><dd><p><code>const char *</code><em>region_name</em>, <br />
 <code>long</code> <em>policy_hint</em>, <br />
 <code>uint64_t *</code><em>region_id</em>);</p></dd>
-<dt><code>int geopm_prof_enter(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
-<code>uint64_t</code> <em>region_id</em>);</p></dd>
-<dt><code>int geopm_prof_exit(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
-<code>uint64_t</code> <em>region_id</em>);</p></dd>
-<dt><code>int geopm_prof_progress(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
-<code>uint64_t</code> <em>region_id</em>, <br />
+<dt><code>int geopm_prof_enter(</code></dt><dd><p><code>uint64_t</code> <em>region_id</em>);</p></dd>
+<dt><code>int geopm_prof_exit(</code></dt><dd><p><code>uint64_t</code> <em>region_id</em>);</p></dd>
+<dt><code>int geopm_prof_progress(</code></dt><dd><p><code>uint64_t</code> <em>region_id</em>, <br />
 <code>double</code> <em>fraction</em>);</p></dd>
-<dt><code>int geopm_prof_outer_sync(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>);</p></dd>
-<dt><code>int geopm_prof_disable(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
-<code>const char *</code><em>feature_name</em>);</p></dd>
-<dt><code>int geopm_prof_print(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
-<code>const char *</code><em>file_name</em>, <br />
-<code>int</code> <em>depth</em>);</p></dd>
+<dt><code>int geopm_prof_outer_sync(</code></dt><dd><p>`void);</p></dd>
+<dt><code>int geopm_prof_disable(</code></dt><dd><p><code>const char *</code><em>feature_name</em>);</p></dd>
 <dt><code>int geopm_tprof_create(</code></dt><dd><p><code>int</code> <em>num_thread</em>, <br />
 <code>size_t</code> <em>num_iter</em>, <br />
 <code>size_t</code> <em>chunk_size</em>, <br />
 <code>struct geopm_tprof_c **</code><em>tprof</em>);</p></dd>
 <dt><code>int geopm_tprof_destroy(</code></dt><dd><p><code>struct geopm_tprof_c *</code><em>tprof</em>);</p></dd>
 <dt><code>int geopm_tprof_increment(</code></dt><dd><p><code>struct geopm_tprof_c *</code><em>tprof</em>, <br />
-<code>struct geopm_prof_c *</code><em>prof</em>, <br />
 <code>uint64_t</code> <em>region_id</em>, <br />
 <code>int</code> <em>thread_idx</em>);</p></dd>
 </dl>
@@ -117,67 +102,37 @@
 
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
 
-<p>The geopm_prof_c and geopm_tprof_c structures enable application
-profiling for geopm.  The functions associated with he geopm_prof_c
-and geopm_tprof_c structures are described here.  These functions
-enable application feedback to the control algorithm for identifying
-regions of code, progress within regions, and global synchronization
-points in the application.  Regions of code define periods in the
-application during which control parameters are tuned with the
-expectation that control parameters for a region can be optimized
-independently of other regions.  In this way a region is associated
-with a set of control parameters which can be optimized, and future
-time intervals associated with the same region will benefit from the
-application of control parameters which were determined from tuning
-within previous occurrences of the region.  There are two competing
-motivations for defining a region within the application.  The first
-is to identify a section of code that has distinct compute, memory or
-network characteristics.  The second is to avoid defining these
-regions such that they are nested within each other, as nested regions
-are ignored, and only the outer most region is used for tuning when
-nesting occurs.  Identifying progress within a region can be used to
-alleviate load imbalance in the application under the assumption that
-the region is bulk synchronous.  Under the assumption that the
-application employs an iterative algorithm which synchronizes
-periodically the user can alleviate load imbalance on larger time
-scales than the regions provide.  This is done by marking the end of
-the outer most loop, or the "outer synchronization point."</p>
+<p>The functions described here enable application feedback to the
+control algorithm for identifying regions of code, progress within
+regions, and global synchronization points in the application.
+Regions of code define periods in the application during which control
+parameters are tuned with the expectation that control parameters for
+a region can be optimized independently of other regions.  In this way
+a region is associated with a set of control parameters which can be
+optimized, and future time intervals associated with the same region
+will benefit from the application of control parameters which were
+determined from tuning within previous occurrences of the region.
+There are two competing motivations for defining a region within the
+application.  The first is to identify a section of code that has
+distinct compute, memory or network characteristics.  The second is to
+avoid defining these regions such that they are nested within each
+other, as nested regions are ignored, and only the outer most region
+is used for tuning when nesting occurs.  Identifying progress within a
+region can be used to alleviate load imbalance in the application
+under the assumption that the region is bulk synchronous.  Under the
+assumption that the application employs an iterative algorithm which
+synchronizes periodically the user can alleviate load imbalance on
+larger time scales than the regions provide.  This is done by marking
+the end of the outer most loop, or the "outer synchronization point."</p>
 
 <dl>
-<dt><code>geopm_prof_create</code>()</dt><dd><p>creates a profile object, <em>prof</em>, which can be used in conjunction
-with all the other <code>geopm_prof_*</code>() APIs described here.  The
-resources associated with the <em>prof</em> are released by passing it to
-<code>geopm_prof_destroy</code>().  The first profile object to be created is
-stored as the default, and if a NULL pointer is subsequently
-passed as the profile argument to any of the <code>geopm_prof_*</code>()
-APIs, this default object will be used.  See
-<code>geopm_prof_default</code>() for more information about the default
-profile.  Construction requires a <em>name</em> which is displayed when
-the profile is printed.  The <em>shm_key</em> specifies the base of the
-POSIX shared memory key that is used to comminicate with the
-control process on the node.  It must start with the '/' character
-and have no other occurances of the '/'.  If no key is provided
-(NULL or empty string), then the environment is queried for
-GEOPM_SHMKEY (see <strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong> for description of environment
-variables) and if set this value is used, otherwise the default
-key '/geopm-default' is used.  The <em>comm</em> is an MPI communicator
-that the calling MPI application is running on (probably
-MPI_COMM_WORLD).</p></dd>
-<dt><code>geopm_prof_destroy</code>()</dt><dd><p>releases all resources associated with the <em>prof</em> object.</p></dd>
-<dt><code>geopm_prof_default</code>()</dt><dd><p>sets the default profile object to <em>prof</em>.  If NULL is passed for
-<em>prof</em> then the return code indicates if there is currently a
-default profile object: returns zero if a default profile object
-has been set and GEOPM_ERROR_LOGIC if it has not been set.  The
-default profile object will be used if NULL is passed for <em>prof</em>
-for any of the <code>geopm_prof_*</code>() APIs.</p></dd>
-<dt><code>geopm_prof_region</code>()</dt><dd><p>registers an application region with the profile object <em>prof</em>.
-The <em>region_name</em> and <em>policy_hint</em> are input parameters, and the
-<em>region_id</em> is output.  The <em>region_id</em> can be used with
-<code>geopm_prof_enter</code>(), <code>geopm_prof_exit</code>(),
-<code>geopm_prof_progress</code>(), and <code>geopm_tprof_progress</code>() to
-referrence the region.  If the region name has been previously
-registered, a call to this function will set the <em>region_id</em> but
-the state in the <em>prof</em> structure associated with the region is
+<dt><code>geopm_prof_region</code>()</dt><dd><p>registers an application region.  The <em>region_name</em> and
+<em>policy_hint</em> are input parameters, and the <em>region_id</em> is output.
+The <em>region_id</em> can be used with <code>geopm_prof_enter</code>(),
+<code>geopm_prof_exit</code>(), <code>geopm_prof_progress</code>(), and
+<code>geopm_tprof_progress</code>() to referrence the region.  If the region
+name has been previously registered, a call to this function will
+set the <em>region_id</em> but the state associated with the region is
 unmodified.  The <em>region_name</em> is used to determine the output
 <em>region_id</em> and is also displayed in the profiling report to
 identify the region.  The <em>policy_hint</em> is one of the values given
@@ -211,18 +166,8 @@ By default all profiling features available on the system are
 enabled.  The set of all possible values for <em>feature_name</em> are:
 "instr", "flop", and "joules".  This API is not currently
 implemented.</p></dd>
-<dt><code>geopm_prof_print</code>()</dt><dd><p>writes a profile report to the file named <em>file_name</em> based on the
-data collected so far.  This is intended for use just prior to
-application termination, and the <em>prof</em> object is not valid after
-calling <code>geopm_prof_print</code>(), though it should still be destroyed
-by calling <code>geopm_prof_destroy</code>().  All profile information above
-the specified <em>depth</em> in the control tree hierarchy is contained
-in the report.  A depth of 0 gives only statistics aggregated over
-all MPI processes.  The <em>depth</em> parameter is not currently used
-and the current implementation creates one report file per compute
-node.</p></dd>
 <dt><code>geopm_tprof_create</code>()</dt><dd><p>creates a thread profiling object, <em>tprof</em>, which extends the
-functionality of a <code>geopm_prof_c</code> object to report progess within
+functionality of the profiling interface to report progress within
 threaded regions.  The interface assumes a fixed number of
 threads, <em>num_thread</em>, which are performing work sharing on a list
 of tasks <em>num_iter</em> long (e.g. an omp parallel for loop with
@@ -233,22 +178,21 @@ distribution amung threads is explicitly calculated while the
 minimum progress of any thread is reported.  In all other
 threading models <em>chunk_size</em> should be specified to be zero and
 progress is aggregated and the mean progress is reported.</p></dd>
-<dt><code>geopm_tprof_destroy</code>()</dt><dd><p>releases all resources associated witht the <em>tprof</em> object.  The
+<dt><code>geopm_tprof_destroy</code>()</dt><dd><p>releases all resources associated with the <em>tprof</em> object.  The
 <em>tprof</em> object should be created and destroyed for each process
 entry into a thread parallel region: the <em>tprof</em> object cannot be
 reused.</p></dd>
 <dt><code>geopm_tprof_increment</code>()</dt><dd><p>is called after a thread has completed each work unit to report
-progress.  The <em>tprof</em> thread profiling object and <em>prof</em> general
-profiling object are passed as the first two arguments. Passing
-NULL for <em>prof</em> inferrs the default profile object.  The region
-identifier returned by <code>geopm_prof_region</code>() is passed as the
-third argument, <em>region_id</em>.  The last argument is the thread
-index which is in the range of [0, 1, ..., <em>num_thread</em> - 1] where
-<em>num_thread</em> is the parameter passed when the <em>tprof</em> was created.
-This index uniquely identifies the thread that is reporting
-progress.  When using the <code>geopm_tprof_increment</code>()
-interface to report progress, it is incorrect to also call the
-<code>geopm_prof_progress</code>() interface.</p></dd>
+progress.  The <em>tprof</em> thread profiling object is passed as the
+first argument. The region identifier returned by
+<code>geopm_prof_region</code>() is passed as the second argument,
+<em>region_id</em>.  The last argument is the thread index which is in
+the range of [0, 1, ..., <em>num_thread</em> - 1] where <em>num_thread</em> is
+the parameter passed when the <em>tprof</em> was created.  This index
+uniquely identifies the thread that is reporting progress.  When
+using the <code>geopm_tprof_increment</code>() interface to report progress,
+it is incorrect to also call the <code>geopm_prof_progress</code>()
+interface for the same region.</p></dd>
 </dl>
 
 
@@ -272,7 +216,6 @@ int main(int argc, char **argv)
     int rank = 0;
     int num_iter = 100000000;
     double sum = 0.0;
-    struct geopm_prof_c *prof = NULL;
     struct geopm_tprof_c *tprof = NULL;
     int num_thread = 0;
     int thread_idx = 0 ;
@@ -291,14 +234,11 @@ int main(int argc, char **argv)
         err = geopm_tprof_create(num_thread, num_iter, chunk_size, &amp;tprof);
     }
     if (!err) {
-        err = geopm_prof_create("timed_loop", NULL, MPI_COMM_WORLD, &amp;prof);
-    }
-    if (!err) {
-        err = geopm_prof_region(NULL, "loop_0", GEOPM_POLICY_HINT_UNKNOWN, &amp;region_id);
+        err = geopm_prof_region("loop_0", GEOPM_POLICY_HINT_UNKNOWN, &amp;region_id);
     }
     MPI_Barrier(MPI_COMM_WORLD);
     if (!err) {
-        err = geopm_prof_enter(NULL, region_id);
+        err = geopm_prof_enter(region_id);
     }
     if (!err) {
 #pragma omp parallel default(shared) private(thread_idx, index)
@@ -307,22 +247,16 @@ int main(int argc, char **argv)
 #pragma omp for reduction(+:sum) schedule(static, chunk_size)
         for (index = 0; index &lt; num_iter; ++index) {
             sum += (double)index;
-            geopm_tprof_increment(tprof, prof, region_id, thread_idx);
+            geopm_tprof_increment(tprof, region_id, thread_idx);
         }
 }
-        err = geopm_prof_exit(NULL, region_id);
+        err = geopm_prof_exit(region_id);
     }
     if (!err) {
         err = MPI_Comm_rank(MPI_COMM_WORLD, &amp;rank);
     }
     if (!err &amp;&amp; !rank) {
         printf("sum = %e\n\n", sum);
-    }
-    if (!err) {
-        err = geopm_prof_print(prof, "timed_loop", 0);
-    }
-    if (!err) {
-        err = geopm_prof_destroy(prof);
     }
 
     int tmp_err = MPI_Finalize();
@@ -344,7 +278,6 @@ to convert them to strings.</p>
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
 <p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
-<strong><a class="man-ref" href="geopm_comm.3.html">geopm_comm<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_fortran.3.html">geopm_fortran<span class="s">(3)</span></a></strong>,
@@ -358,7 +291,7 @@ to convert them to strings.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>May 2016</li>
+    <li class='tc'>October 2016</li>
     <li class='tr'>geopm_prof_c(3)</li>
   </ol>
 

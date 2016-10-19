@@ -108,21 +108,21 @@ Collaboration diagram for geopm::Profile:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_profile__coll__graph.png" border="0" usemap="#geopm_1_1_profile_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_profile_coll__map" id="geopm_1_1_profile_coll__map">
-<area shape="rect" id="node2" href="classgeopm_1_1_profile_table.html" title="ProfileTable class is a specific instantiation of the LockingHashTable class for dealing with applica..." alt="" coords="668,12,807,37"/>
-<area shape="rect" id="node3" href="classgeopm_1_1_locking_hash_table.html" title="geopm::LockingHashTable\l\&lt; struct geopm_prof_message_s \&gt;" alt="" coords="283,5,510,44"/>
-<area shape="rect" id="node4" href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="5,5,184,44"/>
-<area shape="rect" id="node5" href="structgeopm__ctl__message__s.html" title="Structure intended to be shared between the geopm runtime and the application in order to convey stat..." alt="" coords="658,61,816,87"/>
-<area shape="rect" id="node6" href="classgeopm_1_1_sample_scheduler.html" title="SampleSchecduler class encapsulates functionality to schedule and regulate the frequency of applicati..." alt="" coords="650,111,825,136"/>
-<area shape="rect" id="node7" href="structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="342,111,451,136"/>
-<area shape="rect" id="node8" href="classgeopm_1_1_shared_memory_user.html" title="This class encapsulates attaching to inter&#45;process shared memory. " alt="" coords="643,163,832,188"/>
+<area shape="rect" id="node2" href="classgeopm_1_1_profile_table.html" title="Container for multi&#45;threaded or multi&#45;process producer consumer data exchange. " alt="" coords="929,16,1069,41"/>
+<area shape="rect" id="node3" href="structgeopm_1_1_profile_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="637,5,777,44"/>
+<area shape="rect" id="node4" href="structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="247,15,415,40"/>
+<area shape="rect" id="node5" href="structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="5,43,114,68"/>
+<area shape="rect" id="node7" href="classgeopm_1_1_sample_scheduler.html" title="SampleSchecduler class encapsulates functionality to schedule and regulate the frequency of applicati..." alt="" coords="439,67,613,92"/>
+<area shape="rect" id="node6" href="structgeopm__ctl__message__s.html" title="Structure intended to be shared between the geopm runtime and the application in order to convey stat..." alt="" coords="920,120,1078,145"/>
+<area shape="rect" id="node8" href="classgeopm_1_1_shared_memory_user.html" title="This class encapsulates attaching to inter&#45;process shared memory. " alt="" coords="905,173,1093,199"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa715fab28dbd9383580a69acf6a486d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#aa715fab28dbd9383580a69acf6a486d9">Profile</a> (const std::string prof_name, const std::string shm_key_base, MPI_Comm comm)</td></tr>
-<tr class="memdesc:aa715fab28dbd9383580a69acf6a486d9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> constructor.  <a href="#aa715fab28dbd9383580a69acf6a486d9">More...</a><br /></td></tr>
-<tr class="separator:aa715fab28dbd9383580a69acf6a486d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ded6bc890324c30d8b9b609858d093"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a19ded6bc890324c30d8b9b609858d093">Profile</a> (const std::string prof_name, MPI_Comm comm)</td></tr>
+<tr class="memdesc:a19ded6bc890324c30d8b9b609858d093"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> constructor.  <a href="#a19ded6bc890324c30d8b9b609858d093">More...</a><br /></td></tr>
+<tr class="separator:a19ded6bc890324c30d8b9b609858d093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fa28352007c32aa9cd1c0a23dac5e2b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a4fa28352007c32aa9cd1c0a23dac5e2b">~Profile</a> ()</td></tr>
 <tr class="memdesc:a4fa28352007c32aa9cd1c0a23dac5e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> destructor, virtual.  <a href="#a4fa28352007c32aa9cd1c0a23dac5e2b">More...</a><br /></td></tr>
 <tr class="separator:a4fa28352007c32aa9cd1c0a23dac5e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,9 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef228fd1da735371c3e354e74c3e8796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#aef228fd1da735371c3e354e74c3e8796">disable</a> (const std::string feature_name)</td></tr>
 <tr class="memdesc:aef228fd1da735371c3e354e74c3e8796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a data collection feature.  <a href="#aef228fd1da735371c3e354e74c3e8796">More...</a><br /></td></tr>
 <tr class="separator:aef228fd1da735371c3e354e74c3e8796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a475d40fe650541dcddff335b10f73485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a475d40fe650541dcddff335b10f73485">print</a> (const std::string file_name, int depth)</td></tr>
-<tr class="memdesc:a475d40fe650541dcddff335b10f73485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print profile report to a file.  <a href="#a475d40fe650541dcddff335b10f73485">More...</a><br /></td></tr>
-<tr class="separator:a475d40fe650541dcddff335b10f73485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bc51b52dd4bc7342491b317c7a7e539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a0bc51b52dd4bc7342491b317c7a7e539">shutdown</a> (void)</td></tr>
+<tr class="separator:a0bc51b52dd4bc7342491b317c7a7e539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -162,6 +161,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8919b5c0775cc2d316a686075e3b9c22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a8919b5c0775cc2d316a686075e3b9c22">sample</a> (uint64_t region_id)</td></tr>
 <tr class="memdesc:a8919b5c0775cc2d316a686075e3b9c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post profile sample.  <a href="#a8919b5c0775cc2d316a686075e3b9c22">More...</a><br /></td></tr>
 <tr class="separator:a8919b5c0775cc2d316a686075e3b9c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a04a5d25ba1f2a8b5994364d844bc4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a6a04a5d25ba1f2a8b5994364d844bc4c">print</a> (const std::string file_name, int verbosity)</td></tr>
+<tr class="memdesc:a6a04a5d25ba1f2a8b5994364d844bc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print profile report to a file.  <a href="#a6a04a5d25ba1f2a8b5994364d844bc4c">More...</a><br /></td></tr>
+<tr class="separator:a6a04a5d25ba1f2a8b5994364d844bc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -251,7 +253,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa715fab28dbd9383580a69acf6a486d9"></a>
+<a class="anchor" id="a19ded6bc890324c30d8b9b609858d093"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -260,12 +262,6 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
           <td class="paramname"><em>prof_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>shm_key_base</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -287,7 +283,6 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">prof_name</td><td>Name associated with the profile. This name will be printed in the header of the report.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">table_size</td><td>Size in bytes of shared memory region that will be used for posting updates. The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> is responsible for creating the shared memory region that the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> object attaches to. The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> is the consumer of the posted data that the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> produces.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">shm_key_base</td><td>String that is the base for the POSIX shared memory keys that have been created by the <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a>. There is one key created for each MPI rank in the communicator provided (comm), and each key is constructed by appending an underscore followed by a string representation of the integer MPI rank.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">comm</td><td>The application's MPI communicator. Each rank of this communicator will report to a separate shared memory region. One <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> on each compute node will consume the output from each rank running on the compute node. </td></tr>
   </table>
   </dd>
@@ -436,9 +431,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a475d40fe650541dcddff335b10f73485"></a>
+<a class="anchor" id="a6a04a5d25ba1f2a8b5994364d844bc4c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void geopm::Profile::print </td>
@@ -450,7 +448,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>depth</em>&#160;</td>
+          <td class="paramname"><em>verbosity</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -458,14 +456,19 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Print profile report to a file. </p>
-<p>Writes a profile report to a file with the given file_name. This should be called only after all profile data has been collected, just prior to application termination. All profile information above the specified depth in the control tree hierarchy is contained in the report. A depth of 0 gives only statistics aggregated over all MPI processes.</p>
+<p>Writes a profile report to a file with the given file_name. This should be called only after all profile data has been collected, just prior to application termination.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>The base file name for the output report. There may be suffixes appended to this name if multiple files are created.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">depth</td><td>Gives the depth in the control tree which is the finest granularity of the report. By default there are three levels in the hierarchy tree. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">verbosity</td><td>Gives the verbosity level for the report. If zero is given, no report is generated. In the future reports with higher verbosity level will include more details about the run. Currently there is just one type of report created. </td></tr>
   </table>
   </dd>
 </dl>
@@ -542,7 +545,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the region_id which is a unique identifier derived from the region_name. This value is passed to <a class="el" href="classgeopm_1_1_profile.html#a9485c2f86fc044b68bb10ffd1472210d" title="Mark a region entry point. ">Profile::enter()</a>, <a class="el" href="classgeopm_1_1_profile.html#a57347e82375c14f3d56810924e3359e9" title="Mark a region exit point. ">Profile::exit()</a>, <a class="el" href="classgeopm_1_1_profile.html#abac1cf3e464c72d4ba6cc56012934f94" title="Signal fractional progress through a region. ">Profile::progress</a> and <a class="el" href="classgeopm_1_1_profile.html#a8919b5c0775cc2d316a686075e3b9c22" title="Post profile sample. ">Profile::sample()</a> to associate these calls with the registered region. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Record policy hint when registering a region. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Record policy hint when registering a region. </dd></dl>
 
 </div>
 </div>
@@ -576,6 +579,22 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a0bc51b52dd4bc7342491b317c7a7e539"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Profile::shutdown </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

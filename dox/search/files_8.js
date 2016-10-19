@@ -1,19 +1,12 @@
 var searchData=
 [
-  ['platform_2ecpp',['Platform.cpp',['../_platform_8cpp.html',1,'']]],
-  ['platform_2ehpp',['Platform.hpp',['../_platform_8hpp.html',1,'']]],
-  ['platformfactory_2ecpp',['PlatformFactory.cpp',['../_platform_factory_8cpp.html',1,'']]],
-  ['platformfactory_2ehpp',['PlatformFactory.hpp',['../_platform_factory_8hpp.html',1,'']]],
-  ['platformimp_2ecpp',['PlatformImp.cpp',['../_platform_imp_8cpp.html',1,'']]],
-  ['platformimp_2ehpp',['PlatformImp.hpp',['../_platform_imp_8hpp.html',1,'']]],
-  ['platformtopology_2ecpp',['PlatformTopology.cpp',['../_platform_topology_8cpp.html',1,'']]],
-  ['platformtopology_2ehpp',['PlatformTopology.hpp',['../_platform_topology_8hpp.html',1,'']]],
-  ['policy_2ecpp',['Policy.cpp',['../_policy_8cpp.html',1,'']]],
-  ['policy_2ehpp',['Policy.hpp',['../_policy_8hpp.html',1,'']]],
-  ['policyflags_2ecpp',['PolicyFlags.cpp',['../_policy_flags_8cpp.html',1,'']]],
-  ['policyflags_2ehpp',['PolicyFlags.hpp',['../_policy_flags_8hpp.html',1,'']]],
-  ['profile_2ecpp',['Profile.cpp',['../_profile_8cpp.html',1,'']]],
-  ['profile_2ehpp',['Profile.hpp',['../_profile_8hpp.html',1,'']]],
-  ['profilethread_2ecpp',['ProfileThread.cpp',['../_profile_thread_8cpp.html',1,'']]],
-  ['profilethread_2ehpp',['ProfileThread.hpp',['../_profile_thread_8hpp.html',1,'']]]
+  ['sampleregulator_2ecpp',['SampleRegulator.cpp',['../_sample_regulator_8cpp.html',1,'']]],
+  ['sampleregulator_2ehpp',['SampleRegulator.hpp',['../_sample_regulator_8hpp.html',1,'']]],
+  ['samplescheduler_2ecpp',['SampleScheduler.cpp',['../_sample_scheduler_8cpp.html',1,'']]],
+  ['samplescheduler_2ehpp',['SampleScheduler.hpp',['../_sample_scheduler_8hpp.html',1,'']]],
+  ['sharedmemory_2ecpp',['SharedMemory.cpp',['../_shared_memory_8cpp.html',1,'']]],
+  ['sharedmemory_2ehpp',['SharedMemory.hpp',['../_shared_memory_8hpp.html',1,'']]],
+  ['signalhandler_2ecpp',['SignalHandler.cpp',['../_signal_handler_8cpp.html',1,'']]],
+  ['staticpolicydecider_2ecpp',['StaticPolicyDecider.cpp',['../_static_policy_decider_8cpp.html',1,'']]],
+  ['staticpolicydecider_2ehpp',['StaticPolicyDecider.hpp',['../_static_policy_decider_8hpp.html',1,'']]]
 ];

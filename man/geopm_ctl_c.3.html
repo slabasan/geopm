@@ -80,7 +80,6 @@
 
 <dl>
 <dt><code>int geopm_ctl_create(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>, <br />
-<code>const char *</code><em>shm_key</em>, <br />
 <code>MPI_Comm</code> <em>comm</em>, <br />
 <code>struct geopm_ctl_c **</code><em>ctl</em>);</p></dd>
 <dt><code>int geopm_ctl_destroy(</code></dt><dd><p><code>struct geopm_ctl_c *</code><em>ctl</em>);</p></dd>
@@ -112,12 +111,9 @@ that holds the state used to execute the control algorithm with
 one of the other functions described in this man page.  The user
 must provide a geopm_policy_c pointer, see <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>
 man page for details.  The control algorithm relies on feedback
-about the application profile.  The <em>shm_key</em> parameter is the
-base string which is extended to create the POSIX shared memory
-keys referencing shared memory regions used to pass profile data
-from the application to the controller.  The user provides an MPI
-communicator which must have at least one process running on every
-compute node under control.</p></dd>
+about the application profile.  The user provides an MPI
+communicator, <em>comm</em> which must have at least one process running
+on every compute node under control.</p></dd>
 <dt><code>geopm_ctl_destroy</code>()</dt><dd><p>destroys all resources associated with the <em>ctl</em> structure which
 allocated by a previous call to <code>geopm_ctl_create</code>().</p></dd>
 <dt><code>geopm_ctl_step</code>()</dt><dd><p>is called to execute one step in the hierarchical control
@@ -157,7 +153,6 @@ to convert them to strings.</p>
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
 <p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
-<strong><a class="man-ref" href="geopm_comm.3.html">geopm_comm<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopmkey.1.html">geopmkey<span class="s">(1)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_fortran.3.html">geopm_fortran<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
@@ -171,7 +166,7 @@ to convert them to strings.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>May 2016</li>
+    <li class='tc'>October 2016</li>
     <li class='tr'>geopm_ctl_c(3)</li>
   </ol>
 

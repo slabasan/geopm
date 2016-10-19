@@ -128,6 +128,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a89eda6d9924b07b03fe017565e860e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a6a89eda6d9924b07b03fe017565e860e">~Region</a> ()</td></tr>
 <tr class="memdesc:a6a89eda6d9924b07b03fe017565e860e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="#a6a89eda6d9924b07b03fe017565e860e">More...</a><br /></td></tr>
 <tr class="separator:a6a89eda6d9924b07b03fe017565e860e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec26c05d7657373240b4281bef04544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#afec26c05d7657373240b4281bef04544">entry</a> (void)</td></tr>
+<tr class="memdesc:afec26c05d7657373240b4281bef04544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record an entry into the region.  <a href="#afec26c05d7657373240b4281bef04544">More...</a><br /></td></tr>
+<tr class="separator:afec26c05d7657373240b4281bef04544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cab890d439c9f7b1f120a9dfe79a6e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a9cab890d439c9f7b1f120a9dfe79a6e2">num_entry</a> (void)</td></tr>
+<tr class="memdesc:a9cab890d439c9f7b1f120a9dfe79a6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of entries into the region.  <a href="#a9cab890d439c9f7b1f120a9dfe79a6e2">More...</a><br /></td></tr>
+<tr class="separator:a9cab890d439c9f7b1f120a9dfe79a6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac44359d7f60c496cf8a8bb2c16fc4475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ac44359d7f60c496cf8a8bb2c16fc4475">insert</a> (std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt; &amp;telemetry)</td></tr>
 <tr class="memdesc:ac44359d7f60c496cf8a8bb2c16fc4475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert signal data into internal buffers.  <a href="#ac44359d7f60c496cf8a8bb2c16fc4475">More...</a><br /></td></tr>
 <tr class="separator:ac44359d7f60c496cf8a8bb2c16fc4475"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,8 +179,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a984286abe1ed1b79cd9e5b6fcaa0a839"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a984286abe1ed1b79cd9e5b6fcaa0a839">integral</a> (int domain_idx, int signal_type, double &amp;delta_time, double &amp;integral) const </td></tr>
 <tr class="memdesc:a984286abe1ed1b79cd9e5b6fcaa0a839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate a signal over time.  <a href="#a984286abe1ed1b79cd9e5b6fcaa0a839">More...</a><br /></td></tr>
 <tr class="separator:a984286abe1ed1b79cd9e5b6fcaa0a839"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca61d70c5e060c5d8947f987a436f08e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#aca61d70c5e060c5d8947f987a436f08e">report</a> (std::ofstream &amp;file_stream, const std::string &amp;name) const </td></tr>
-<tr class="separator:aca61d70c5e060c5d8947f987a436f08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af227f5fb5ec38c87ad616bcfee5b28c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#af227f5fb5ec38c87ad616bcfee5b28c5">report</a> (std::ofstream &amp;file_stream, const std::string &amp;name, int rank_per_node) const </td></tr>
+<tr class="separator:af227f5fb5ec38c87ad616bcfee5b28c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -250,6 +256,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a2a64676ec42862e0c3e3def4eb019a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9560bff6728d35a2212cfe914f202da"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#aa9560bff6728d35a2212cfe914f202da">m_agg_stats</a></td></tr>
 <tr class="separator:aa9560bff6728d35a2212cfe914f202da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d767ead1446c6317bff671379eab45"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a89d767ead1446c6317bff671379eab45">m_num_entry</a></td></tr>
+<tr class="separator:a89d767ead1446c6317bff671379eab45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f53c9798469163ecf458b1fb4d3fa1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a18f53c9798469163ecf458b1fb4d3fa1">m_is_entered</a></td></tr>
+<tr class="separator:a18f53c9798469163ecf458b1fb4d3fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class encapsulates all recorded data for a specific application execution region. </p>
@@ -496,6 +506,24 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afec26c05d7657373240b4281bef04544"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Region::entry </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Record an entry into the region. </p>
 
 </div>
 </div>
@@ -851,6 +879,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9cab890d439c9f7b1f120a9dfe79a6e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Region::num_entry </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the number of entries into the region. </p>
+
+</div>
+</div>
 <a class="anchor" id="a455bae5a3314aed0e6145cbe0f259b41"></a>
 <div class="memitem">
 <div class="memproto">
@@ -888,7 +934,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aca61d70c5e060c5d8947f987a436f08e"></a>
+<a class="anchor" id="af227f5fb5ec38c87ad616bcfee5b28c5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -902,7 +948,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rank_per_node</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1058,7 +1110,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>why does the <a class="el" href="classgeopm_1_1_region.html" title="This class encapsulates all recorded data for a specific application execution region. ">Region</a> get telemetry data for a different region id? </dd></dl>
 
 </div>
 </div>
@@ -1317,6 +1368,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a18f53c9798469163ecf458b1fb4d3fa1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;bool&gt; geopm::Region::m_is_entered</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af933b29684dbc1cc640a1cf47acf6167"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1402,6 +1473,26 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Numnber of domains reporting to the region. </p>
+
+</div>
+</div>
+<a class="anchor" id="a89d767ead1446c6317bff671379eab45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t geopm::Region::m_num_entry</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

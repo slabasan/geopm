@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classgeopm_1_1_decider-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">geopm::Decider Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -122,6 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34cbd2dd0500b42bbf980d68440f2c56"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgeopm_1_1_decider.html">Decider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a34cbd2dd0500b42bbf980d68440f2c56">clone</a> () const  =0</td></tr>
 <tr class="memdesc:a34cbd2dd0500b42bbf980d68440f2c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a pointer of the derived class, virtual.  <a href="#a34cbd2dd0500b42bbf980d68440f2c56">More...</a><br /></td></tr>
 <tr class="separator:a34cbd2dd0500b42bbf980d68440f2c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa4526a8d88c5082fa0255029f5d622"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a2aa4526a8d88c5082fa0255029f5d622">bound</a> (double upper_bound, double lower_bound)</td></tr>
+<tr class="memdesc:a2aa4526a8d88c5082fa0255029f5d622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the upper and lower control bounds. For a power based control, this will be the upper and lower power bounds of a single tree node below the current one. For a frequency based control this will be the p-state bounds of a single leaf node.  <a href="#a2aa4526a8d88c5082fa0255029f5d622">More...</a><br /></td></tr>
+<tr class="separator:a2aa4526a8d88c5082fa0255029f5d622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d139375ddf051b32c08637eecddc621"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a5d139375ddf051b32c08637eecddc621">update_policy</a> (const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy_msg, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;curr_policy)</td></tr>
 <tr class="memdesc:a5d139375ddf051b32c08637eecddc621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the power split among power control domains when recieving a new global budget, vitual.  <a href="#a5d139375ddf051b32c08637eecddc621">More...</a><br /></td></tr>
 <tr class="separator:a5d139375ddf051b32c08637eecddc621"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +138,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0dfc0c04fd7ae5e81aafb0782e13e921"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a0dfc0c04fd7ae5e81aafb0782e13e921">name</a> (void) const  =0</td></tr>
 <tr class="memdesc:a0dfc0c04fd7ae5e81aafb0782e13e921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of the decider, virtual.  <a href="#a0dfc0c04fd7ae5e81aafb0782e13e921">More...</a><br /></td></tr>
 <tr class="separator:a0dfc0c04fd7ae5e81aafb0782e13e921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae0889db94b3214ea5a5f62499afdc61a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#ae0889db94b3214ea5a5f62499afdc61a">m_last_power_budget</a></td></tr>
+<tr class="memdesc:ae0889db94b3214ea5a5f62499afdc61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the last known power budget.  <a href="#ae0889db94b3214ea5a5f62499afdc61a">More...</a><br /></td></tr>
+<tr class="separator:ae0889db94b3214ea5a5f62499afdc61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6da643c77ef78fbf7188f48f5a1cb6e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#aa6da643c77ef78fbf7188f48f5a1cb6e">m_upper_bound</a></td></tr>
+<tr class="memdesc:aa6da643c77ef78fbf7188f48f5a1cb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The upper control bound;.  <a href="#aa6da643c77ef78fbf7188f48f5a1cb6e">More...</a><br /></td></tr>
+<tr class="separator:aa6da643c77ef78fbf7188f48f5a1cb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f8a4907cbfe867555f7b2fcc8aef03"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a19f8a4907cbfe867555f7b2fcc8aef03">m_lower_bound</a></td></tr>
+<tr class="memdesc:a19f8a4907cbfe867555f7b2fcc8aef03"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lower control bound;.  <a href="#a19f8a4907cbfe867555f7b2fcc8aef03">More...</a><br /></td></tr>
+<tr class="separator:a19f8a4907cbfe867555f7b2fcc8aef03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for power/frequency steering algorithms. </p>
@@ -182,6 +198,51 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2aa4526a8d88c5082fa0255029f5d622"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Decider::bound </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>upper_bound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lower_bound</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the upper and lower control bounds. For a power based control, this will be the upper and lower power bounds of a single tree node below the current one. For a frequency based control this will be the p-state bounds of a single leaf node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">upper_bound</td><td>The upper control bound.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lower_bound</td><td>The lower control bound. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#acb68825662b11167607208af46fee02e">geopm::BalancingDecider</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a34cbd2dd0500b42bbf980d68440f2c56"></a>
 <div class="memitem">
 <div class="memproto">
@@ -299,7 +360,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Updates the power split among power control domains when recieving a new global budget, vitual. </p>
 
-<p>Reimplemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a10c4726f62b90df5a8a513592cb7a341">geopm::BalancingDecider</a>, <a class="el" href="classgeopm_1_1_governing_decider.html#a806d1d02fd7ca1563fc21fff37c841fe">geopm::GoverningDecider</a>, and <a class="el" href="classgeopm_1_1_static_policy_decider.html#ae0233368c709dee4fe135e3e2d4b0838">geopm::StaticPolicyDecider</a>.</p>
+<p>Reimplemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a10c4726f62b90df5a8a513592cb7a341">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a806d1d02fd7ca1563fc21fff37c841fe">geopm::GoverningDecider</a>.</p>
 
 </div>
 </div>
@@ -338,6 +399,49 @@ Public Member Functions</h2></td></tr>
 <p>Calculate a new power policy for the region based on telemery data, virtual. </p>
 
 <p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a6228496fb6beb0b2581ff8764c70b71b">geopm::BalancingDecider</a>, <a class="el" href="classgeopm_1_1_governing_decider.html#add5feebbd6b9947631f6ff81f0cdbcd7">geopm::GoverningDecider</a>, and <a class="el" href="classgeopm_1_1_static_policy_decider.html#aa97a4fcd821ca71cd5277a23222ba6fb">geopm::StaticPolicyDecider</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ae0889db94b3214ea5a5f62499afdc61a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Decider::m_last_power_budget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Save the last known power budget. </p>
+
+</div>
+</div>
+<a class="anchor" id="a19f8a4907cbfe867555f7b2fcc8aef03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Decider::m_lower_bound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The lower control bound;. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa6da643c77ef78fbf7188f48f5a1cb6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Decider::m_upper_bound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The upper control bound;. </p>
 
 </div>
 </div>

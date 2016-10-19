@@ -139,121 +139,98 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/* Opaque structure which is a handle for a geopm::Controller object. */</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">struct </span>geopm_ctl_c;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/* Opaque structure which is a handle for a geopm::Profile object. */</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">struct </span>geopm_prof_c;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/* Opaque structure which is a handle for a geopm::ProfileThread object. */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">struct </span>geopm_tprof_c;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">struct </span>geopm_tprof_c;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/************************/</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/* OBJECT INSTANTIATION */</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/************************/</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">/* OBJECT INSTANTIATION */</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">/************************/</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#afaac970bd9ac6b8b6d37a2284737c466">geopm_ctl_create</a>(<span class="keyword">struct</span> geopm_policy_c *policy,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">char</span> *shm_key,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                     MPI_Comm comm,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                     <span class="keyword">struct</span> geopm_ctl_c **ctl);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a2009b6e7edf6c1bf1eb9d248bf119b58">geopm_ctl_destroy</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">/********************/</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">/* POWER MANAGEMENT */</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/********************/</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#abb33d8c5560a12783add529e4c52b8af">geopm_ctl_step</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a2c9c4845452132f1641760c9c7574138">geopm_ctl_run</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a8396119bec8b18f8de3932755aaf0179">geopm_ctl_pthread</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                      <span class="keyword">const</span> pthread_attr_t *attr,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                      pthread_t *thread);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a86fe7be6e07e7a2a7f31aa6c2362ad55">geopm_ctl_spawn</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">/*************************/</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">/* APPLICATION PROFILING */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/*************************/</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a088312b99568b91fda0737778d75612a">geopm_prof_create</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                      <span class="keyword">const</span> <span class="keywordtype">char</span> *shm_key,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                      MPI_Comm comm,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                      <span class="keyword">struct</span> geopm_prof_c **prof);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#ac4661f982d3901265ac7b5f869963db3">geopm_ctl_create</a>(<span class="keyword">struct</span> geopm_policy_c *policy,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                     MPI_Comm comm,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                     <span class="keyword">struct</span> geopm_ctl_c **ctl);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a2009b6e7edf6c1bf1eb9d248bf119b58">geopm_ctl_destroy</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">/********************/</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/* POWER MANAGEMENT */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/********************/</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#abb33d8c5560a12783add529e4c52b8af">geopm_ctl_step</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a2c9c4845452132f1641760c9c7574138">geopm_ctl_run</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a8396119bec8b18f8de3932755aaf0179">geopm_ctl_pthread</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                      <span class="keyword">const</span> pthread_attr_t *attr,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                      pthread_t *thread);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a86fe7be6e07e7a2a7f31aa6c2362ad55">geopm_ctl_spawn</a>(<span class="keyword">struct</span> geopm_ctl_c *ctl);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/*************************/</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">/* APPLICATION PROFILING */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/*************************/</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a939e1f368dc89b889abb9056aca53d95">geopm_prof_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#ad7d3fedaab36a0e905e00de5ecaa61f3">geopm_prof_region</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *region_name,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                      <span class="keywordtype">long</span> policy_hint,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                      uint64_t *region_id);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#adef05bfa8aa842eaa9ff6740bc728431">geopm_prof_enter</a>(uint64_t region_id);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a7f90119ba6c15a0e88fbffa12224c790">geopm_prof_destroy</a>(<span class="keyword">struct</span> geopm_prof_c *prof);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#aacf50471bcf979c6e5c3011697fddf46">geopm_prof_exit</a>(uint64_t region_id);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a8c7a6139bd88437a6fb3af0954d51f9a">geopm_prof_default</a>(<span class="keyword">struct</span> geopm_prof_c *prof);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a7e244d63e87a37bb8ec58e2f8aef2001">geopm_prof_region</a>(<span class="keyword">struct</span> geopm_prof_c *prof,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                      <span class="keyword">const</span> <span class="keywordtype">char</span> *region_name,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                      <span class="keywordtype">long</span> policy_hint,</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                      uint64_t *region_id);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#ad910d39f6eaa1cfe30c19d92604419eb">geopm_prof_progress</a>(uint64_t region_id,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        <span class="keywordtype">double</span> fraction);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#af79633b03443708f6c59d96005e5ac08">geopm_prof_outer_sync</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#abda6b90ddc2b0b33e5b0e49da3cdc262">geopm_prof_disable</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *feature_name);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a94b79a41fd00af21ce30b2ca687d8e0e">geopm_prof_enter</a>(<span class="keyword">struct</span> geopm_prof_c *prof,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                     uint64_t region_id);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a0f5c19ead7b41bcfadf5e9c4ab4f3514">geopm_prof_exit</a>(<span class="keyword">struct</span> geopm_prof_c *prof,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    uint64_t region_id);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#ac4ebb30507f2ff672f0cda34a4623056">geopm_prof_progress</a>(<span class="keyword">struct</span> geopm_prof_c *prof,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        uint64_t region_id,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="keywordtype">double</span> fraction);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a8caf0dea9fd075aeb1e2b249cf745ad6">geopm_prof_outer_sync</a>(<span class="keyword">struct</span> geopm_prof_c *prof);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a950ba06ba888d3bf3245b98ca3330826">geopm_prof_disable</a>(<span class="keyword">struct</span> geopm_prof_c *prof,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">char</span> *feature_name);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a58148e604d0b8da9075ced986d82588c">geopm_prof_print</a>(<span class="keyword">struct</span> geopm_prof_c *prof,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                     <span class="keywordtype">int</span> depth);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a652530d0483a1295996b6bf88f1b402c">geopm_tprof_create</a>(<span class="keywordtype">int</span> num_thread,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                       <span class="keywordtype">size_t</span> num_iter,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                       <span class="keywordtype">size_t</span> chunk_size,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                       <span class="keyword">struct</span> geopm_tprof_c **tprof);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a2051dd55e11886316b727513f715767d">geopm_tprof_destroy</a>(<span class="keyword">struct</span> geopm_tprof_c *tprof);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a5bd8605a5cde0fb2b801ea7cad2d589c">geopm_tprof_increment</a>(<span class="keyword">struct</span> geopm_tprof_c *tprof,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                          <span class="keyword">struct</span> geopm_prof_c *prof,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                          uint64_t region_id,</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                          <span class="keywordtype">int</span> thread_idx);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/*****************/</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">/* MPI COMM APIS */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">/*****************/</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a8266fe51dbff341ed0149594c2cbc492">geopm_comm_num_node</a>(MPI_Comm comm, <span class="keywordtype">int</span> *num_node);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a4f5de5ccc097bf2b25a84279f9d50fd0">geopm_comm_split</a>(MPI_Comm comm, MPI_Comm *split_comm, <span class="keywordtype">int</span> *is_ctl_comm);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#ad6413d8a046ae897350da12ac493292e">geopm_comm_split_ppn1</a>(MPI_Comm comm, MPI_Comm *ppn1_comm);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#aec0145ceb27c0a3f9a939b3cce298e3b">geopm_comm_split_shared</a>(MPI_Comm comm, MPI_Comm *split_comm);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="geopm_8h_html_a2c9c4845452132f1641760c9c7574138"><div class="ttname"><a href="geopm_8h.html#a2c9c4845452132f1641760c9c7574138">geopm_ctl_run</a></div><div class="ttdeci">int geopm_ctl_run(struct geopm_ctl_c *ctl)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:126</div></div>
-<div class="ttc" id="geopm_8h_html_a7f90119ba6c15a0e88fbffa12224c790"><div class="ttname"><a href="geopm_8h.html#a7f90119ba6c15a0e88fbffa12224c790">geopm_prof_destroy</a></div><div class="ttdeci">int geopm_prof_destroy(struct geopm_prof_c *prof)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:93</div></div>
-<div class="ttc" id="geopm_8h_html_ad6413d8a046ae897350da12ac493292e"><div class="ttname"><a href="geopm_8h.html#ad6413d8a046ae897350da12ac493292e">geopm_comm_split_ppn1</a></div><div class="ttdeci">int geopm_comm_split_ppn1(MPI_Comm comm, MPI_Comm *ppn1_comm)</div><div class="ttdef"><b>Definition:</b> TreeCommunicator.cpp:68</div></div>
-<div class="ttc" id="geopm_8h_html_afaac970bd9ac6b8b6d37a2284737c466"><div class="ttname"><a href="geopm_8h.html#afaac970bd9ac6b8b6d37a2284737c466">geopm_ctl_create</a></div><div class="ttdeci">int geopm_ctl_create(struct geopm_policy_c *policy, const char *shm_key, MPI_Comm comm, struct geopm_ctl_c **ctl)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:94</div></div>
-<div class="ttc" id="geopm_8h_html_abb33d8c5560a12783add529e4c52b8af"><div class="ttname"><a href="geopm_8h.html#abb33d8c5560a12783add529e4c52b8af">geopm_ctl_step</a></div><div class="ttdeci">int geopm_ctl_step(struct geopm_ctl_c *ctl)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:138</div></div>
-<div class="ttc" id="geopm_8h_html_a2051dd55e11886316b727513f715767d"><div class="ttname"><a href="geopm_8h.html#a2051dd55e11886316b727513f715767d">geopm_tprof_destroy</a></div><div class="ttdeci">int geopm_tprof_destroy(struct geopm_tprof_c *tprof)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:255</div></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a53ecfd1b777e6ae44721601df510c4a3">geopm_prof_shutdown</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a652530d0483a1295996b6bf88f1b402c">geopm_tprof_create</a>(<span class="keywordtype">int</span> num_thread,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                       <span class="keywordtype">size_t</span> num_iter,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                       <span class="keywordtype">size_t</span> chunk_size,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                       <span class="keyword">struct</span> geopm_tprof_c **tprof);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a2051dd55e11886316b727513f715767d">geopm_tprof_destroy</a>(<span class="keyword">struct</span> geopm_tprof_c *tprof);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#a9a2f5c60635e59af00bea7cc4eebc5d5">geopm_tprof_increment</a>(<span class="keyword">struct</span> geopm_tprof_c *tprof,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                          uint64_t region_id,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                          <span class="keywordtype">int</span> thread_idx);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">/*****************/</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">/* MPI COMM APIS */</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/*****************/</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#abf6a3c0dca5156c1ac9f3c26191ef41d">geopm_comm_split</a>(MPI_Comm comm, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, MPI_Comm *split_comm, <span class="keywordtype">int</span> *is_ctl_comm);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#af435252665b77fe8775e6b035efbaf0d">geopm_comm_split_ppn1</a>(MPI_Comm comm, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, MPI_Comm *ppn1_comm);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm_8h.html#aa3141bfa63a257b2d4e241c700ab3281">geopm_comm_split_shared</a>(MPI_Comm comm, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, MPI_Comm *split_comm);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="geopm_8h_html_a2c9c4845452132f1641760c9c7574138"><div class="ttname"><a href="geopm_8h.html#a2c9c4845452132f1641760c9c7574138">geopm_ctl_run</a></div><div class="ttdeci">int geopm_ctl_run(struct geopm_ctl_c *ctl)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:127</div></div>
+<div class="ttc" id="geopm_8h_html_af79633b03443708f6c59d96005e5ac08"><div class="ttname"><a href="geopm_8h.html#af79633b03443708f6c59d96005e5ac08">geopm_prof_outer_sync</a></div><div class="ttdeci">int geopm_prof_outer_sync(void)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:136</div></div>
+<div class="ttc" id="geopm_8h_html_adef05bfa8aa842eaa9ff6740bc728431"><div class="ttname"><a href="geopm_8h.html#adef05bfa8aa842eaa9ff6740bc728431">geopm_prof_enter</a></div><div class="ttdeci">int geopm_prof_enter(uint64_t region_id)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:100</div></div>
+<div class="ttc" id="geopm_8h_html_abb33d8c5560a12783add529e4c52b8af"><div class="ttname"><a href="geopm_8h.html#abb33d8c5560a12783add529e4c52b8af">geopm_ctl_step</a></div><div class="ttdeci">int geopm_ctl_step(struct geopm_ctl_c *ctl)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:140</div></div>
+<div class="ttc" id="geopm_8h_html_a2051dd55e11886316b727513f715767d"><div class="ttname"><a href="geopm_8h.html#a2051dd55e11886316b727513f715767d">geopm_tprof_destroy</a></div><div class="ttdeci">int geopm_tprof_destroy(struct geopm_tprof_c *tprof)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:184</div></div>
 <div class="ttc" id="geopm__policy_8h_html"><div class="ttname"><a href="geopm__policy_8h.html">geopm_policy.h</a></div></div>
-<div class="ttc" id="geopm_8h_html_a58148e604d0b8da9075ced986d82588c"><div class="ttname"><a href="geopm_8h.html#a58148e604d0b8da9075ced986d82588c">geopm_prof_print</a></div><div class="ttdeci">int geopm_prof_print(struct geopm_prof_c *prof, const char *file_name, int depth)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:226</div></div>
-<div class="ttc" id="geopm_8h_html_a5bd8605a5cde0fb2b801ea7cad2d589c"><div class="ttname"><a href="geopm_8h.html#a5bd8605a5cde0fb2b801ea7cad2d589c">geopm_tprof_increment</a></div><div class="ttdeci">int geopm_tprof_increment(struct geopm_tprof_c *tprof, struct geopm_prof_c *prof, uint64_t region_id, int thread_idx)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:271</div></div>
-<div class="ttc" id="geopm_8h_html_a8c7a6139bd88437a6fb3af0954d51f9a"><div class="ttname"><a href="geopm_8h.html#a8c7a6139bd88437a6fb3af0954d51f9a">geopm_prof_default</a></div><div class="ttdeci">int geopm_prof_default(struct geopm_prof_c *prof)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:112</div></div>
-<div class="ttc" id="geopm_8h_html_a94b79a41fd00af21ce30b2ca687d8e0e"><div class="ttname"><a href="geopm_8h.html#a94b79a41fd00af21ce30b2ca687d8e0e">geopm_prof_enter</a></div><div class="ttdeci">int geopm_prof_enter(struct geopm_prof_c *prof, uint64_t region_id)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:141</div></div>
-<div class="ttc" id="geopm_8h_html_a652530d0483a1295996b6bf88f1b402c"><div class="ttname"><a href="geopm_8h.html#a652530d0483a1295996b6bf88f1b402c">geopm_tprof_create</a></div><div class="ttdeci">int geopm_tprof_create(int num_thread, size_t num_iter, size_t chunk_size, struct geopm_tprof_c **tprof)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:243</div></div>
-<div class="ttc" id="geopm_8h_html_a4f5de5ccc097bf2b25a84279f9d50fd0"><div class="ttname"><a href="geopm_8h.html#a4f5de5ccc097bf2b25a84279f9d50fd0">geopm_comm_split</a></div><div class="ttdeci">int geopm_comm_split(MPI_Comm comm, MPI_Comm *split_comm, int *is_ctl_comm)</div><div class="ttdef"><b>Definition:</b> TreeCommunicator.cpp:136</div></div>
-<div class="ttc" id="geopm_8h_html_a8396119bec8b18f8de3932755aaf0179"><div class="ttname"><a href="geopm_8h.html#a8396119bec8b18f8de3932755aaf0179">geopm_ctl_pthread</a></div><div class="ttdeci">int geopm_ctl_pthread(struct geopm_ctl_c *ctl, const pthread_attr_t *attr, pthread_t *thread)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:150</div></div>
-<div class="ttc" id="geopm_8h_html_a0f5c19ead7b41bcfadf5e9c4ab4f3514"><div class="ttname"><a href="geopm_8h.html#a0f5c19ead7b41bcfadf5e9c4ab4f3514">geopm_prof_exit</a></div><div class="ttdeci">int geopm_prof_exit(struct geopm_prof_c *prof, uint64_t region_id)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:158</div></div>
-<div class="ttc" id="geopm_8h_html_a7e244d63e87a37bb8ec58e2f8aef2001"><div class="ttname"><a href="geopm_8h.html#a7e244d63e87a37bb8ec58e2f8aef2001">geopm_prof_region</a></div><div class="ttdeci">int geopm_prof_region(struct geopm_prof_c *prof, const char *region_name, long policy_hint, uint64_t *region_id)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:125</div></div>
-<div class="ttc" id="geopm_8h_html_a950ba06ba888d3bf3245b98ca3330826"><div class="ttname"><a href="geopm_8h.html#a950ba06ba888d3bf3245b98ca3330826">geopm_prof_disable</a></div><div class="ttdeci">int geopm_prof_disable(struct geopm_prof_c *prof, const char *feature_name)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:209</div></div>
-<div class="ttc" id="geopm_8h_html_ac4ebb30507f2ff672f0cda34a4623056"><div class="ttname"><a href="geopm_8h.html#ac4ebb30507f2ff672f0cda34a4623056">geopm_prof_progress</a></div><div class="ttdeci">int geopm_prof_progress(struct geopm_prof_c *prof, uint64_t region_id, double fraction)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:175</div></div>
-<div class="ttc" id="geopm_8h_html_aec0145ceb27c0a3f9a939b3cce298e3b"><div class="ttname"><a href="geopm_8h.html#aec0145ceb27c0a3f9a939b3cce298e3b">geopm_comm_split_shared</a></div><div class="ttdeci">int geopm_comm_split_shared(MPI_Comm comm, MPI_Comm *split_comm)</div><div class="ttdef"><b>Definition:</b> TreeCommunicator.cpp:88</div></div>
-<div class="ttc" id="geopm_8h_html_a8caf0dea9fd075aeb1e2b249cf745ad6"><div class="ttname"><a href="geopm_8h.html#a8caf0dea9fd075aeb1e2b249cf745ad6">geopm_prof_outer_sync</a></div><div class="ttdeci">int geopm_prof_outer_sync(struct geopm_prof_c *prof)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:192</div></div>
+<div class="ttc" id="geopm_8h_html_ac4661f982d3901265ac7b5f869963db3"><div class="ttname"><a href="geopm_8h.html#ac4661f982d3901265ac7b5f869963db3">geopm_ctl_create</a></div><div class="ttdeci">int geopm_ctl_create(struct geopm_policy_c *policy, MPI_Comm comm, struct geopm_ctl_c **ctl)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:96</div></div>
+<div class="ttc" id="geopm_8h_html_a9a2f5c60635e59af00bea7cc4eebc5d5"><div class="ttname"><a href="geopm_8h.html#a9a2f5c60635e59af00bea7cc4eebc5d5">geopm_tprof_increment</a></div><div class="ttdeci">int geopm_tprof_increment(struct geopm_tprof_c *tprof, uint64_t region_id, int thread_idx)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:200</div></div>
+<div class="ttc" id="geopm_8h_html_a652530d0483a1295996b6bf88f1b402c"><div class="ttname"><a href="geopm_8h.html#a652530d0483a1295996b6bf88f1b402c">geopm_tprof_create</a></div><div class="ttdeci">int geopm_tprof_create(int num_thread, size_t num_iter, size_t chunk_size, struct geopm_tprof_c **tprof)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:172</div></div>
+<div class="ttc" id="geopm_8h_html_a939e1f368dc89b889abb9056aca53d95"><div class="ttname"><a href="geopm_8h.html#a939e1f368dc89b889abb9056aca53d95">geopm_prof_init</a></div><div class="ttdeci">int geopm_prof_init(void)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:76</div></div>
+<div class="ttc" id="geopm_8h_html_a8396119bec8b18f8de3932755aaf0179"><div class="ttname"><a href="geopm_8h.html#a8396119bec8b18f8de3932755aaf0179">geopm_ctl_pthread</a></div><div class="ttdeci">int geopm_ctl_pthread(struct geopm_ctl_c *ctl, const pthread_attr_t *attr, pthread_t *thread)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:152</div></div>
+<div class="ttc" id="geopm_8h_html_abf6a3c0dca5156c1ac9f3c26191ef41d"><div class="ttname"><a href="geopm_8h.html#abf6a3c0dca5156c1ac9f3c26191ef41d">geopm_comm_split</a></div><div class="ttdeci">int geopm_comm_split(MPI_Comm comm, const char *tag, MPI_Comm *split_comm, int *is_ctl_comm)</div><div class="ttdef"><b>Definition:</b> TreeCommunicator.cpp:120</div></div>
+<div class="ttc" id="geopm_8h_html_aacf50471bcf979c6e5c3011697fddf46"><div class="ttname"><a href="geopm_8h.html#aacf50471bcf979c6e5c3011697fddf46">geopm_prof_exit</a></div><div class="ttdeci">int geopm_prof_exit(uint64_t region_id)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:112</div></div>
+<div class="ttc" id="geopm_8h_html_abda6b90ddc2b0b33e5b0e49da3cdc262"><div class="ttname"><a href="geopm_8h.html#abda6b90ddc2b0b33e5b0e49da3cdc262">geopm_prof_disable</a></div><div class="ttdeci">int geopm_prof_disable(const char *feature_name)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:148</div></div>
+<div class="ttc" id="geopm_8h_html_aa3141bfa63a257b2d4e241c700ab3281"><div class="ttname"><a href="geopm_8h.html#aa3141bfa63a257b2d4e241c700ab3281">geopm_comm_split_shared</a></div><div class="ttdeci">int geopm_comm_split_shared(MPI_Comm comm, const char *tag, MPI_Comm *split_comm)</div><div class="ttdef"><b>Definition:</b> TreeCommunicator.cpp:70</div></div>
+<div class="ttc" id="geopm_8h_html_a53ecfd1b777e6ae44721601df510c4a3"><div class="ttname"><a href="geopm_8h.html#a53ecfd1b777e6ae44721601df510c4a3">geopm_prof_shutdown</a></div><div class="ttdeci">int geopm_prof_shutdown(void)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:160</div></div>
+<div class="ttc" id="geopm_8h_html_ad7d3fedaab36a0e905e00de5ecaa61f3"><div class="ttname"><a href="geopm_8h.html#ad7d3fedaab36a0e905e00de5ecaa61f3">geopm_prof_region</a></div><div class="ttdeci">int geopm_prof_region(const char *region_name, long policy_hint, uint64_t *region_id)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:88</div></div>
+<div class="ttc" id="geopm_8h_html_af435252665b77fe8775e6b035efbaf0d"><div class="ttname"><a href="geopm_8h.html#af435252665b77fe8775e6b035efbaf0d">geopm_comm_split_ppn1</a></div><div class="ttdeci">int geopm_comm_split_ppn1(MPI_Comm comm, const char *tag, MPI_Comm *ppn1_comm)</div><div class="ttdef"><b>Definition:</b> TreeCommunicator.cpp:58</div></div>
 <div class="ttc" id="geopm_8h_html_a86fe7be6e07e7a2a7f31aa6c2362ad55"><div class="ttname"><a href="geopm_8h.html#a86fe7be6e07e7a2a7f31aa6c2362ad55">geopm_ctl_spawn</a></div><div class="ttdeci">int geopm_ctl_spawn(struct geopm_ctl_c *ctl)</div><div class="ttdef"><b>Definition:</b> geopm_ctl_spawn.c:40</div></div>
-<div class="ttc" id="geopm_8h_html_a2009b6e7edf6c1bf1eb9d248bf119b58"><div class="ttname"><a href="geopm_8h.html#a2009b6e7edf6c1bf1eb9d248bf119b58">geopm_ctl_destroy</a></div><div class="ttdeci">int geopm_ctl_destroy(struct geopm_ctl_c *ctl)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:113</div></div>
-<div class="ttc" id="geopm_8h_html_a088312b99568b91fda0737778d75612a"><div class="ttname"><a href="geopm_8h.html#a088312b99568b91fda0737778d75612a">geopm_prof_create</a></div><div class="ttdeci">int geopm_prof_create(const char *name, const char *shm_key, MPI_Comm comm, struct geopm_prof_c **prof)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:71</div></div>
-<div class="ttc" id="geopm_8h_html_a8266fe51dbff341ed0149594c2cbc492"><div class="ttname"><a href="geopm_8h.html#a8266fe51dbff341ed0149594c2cbc492">geopm_comm_num_node</a></div><div class="ttdeci">int geopm_comm_num_node(MPI_Comm comm, int *num_node)</div><div class="ttdef"><b>Definition:</b> TreeCommunicator.cpp:57</div></div>
+<div class="ttc" id="geopm_8h_html_a2009b6e7edf6c1bf1eb9d248bf119b58"><div class="ttname"><a href="geopm_8h.html#a2009b6e7edf6c1bf1eb9d248bf119b58">geopm_ctl_destroy</a></div><div class="ttdeci">int geopm_ctl_destroy(struct geopm_ctl_c *ctl)</div><div class="ttdef"><b>Definition:</b> Controller.cpp:114</div></div>
+<div class="ttc" id="geopm_8h_html_ad910d39f6eaa1cfe30c19d92604419eb"><div class="ttname"><a href="geopm_8h.html#ad910d39f6eaa1cfe30c19d92604419eb">geopm_prof_progress</a></div><div class="ttdeci">int geopm_prof_progress(uint64_t region_id, double fraction)</div><div class="ttdef"><b>Definition:</b> Profile.cpp:124</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['hash',['hash',['../classgeopm_1_1_locking_hash_table.html#abd9169f4ba7a25bd3b9d3d958c84ddff',1,'geopm::LockingHashTable']]],
+  ['hash',['hash',['../classgeopm_1_1_profile_table.html#a2853f4d86eee9820b1ec640dd8d36db9',1,'geopm::ProfileTable']]],
   ['hint',['hint',['../classgeopm_1_1_region.html#a727a035f9752b53bcf87f89ddf7ac119',1,'geopm::Region']]],
-  ['hsxplatformimp',['HSXPlatformImp',['../classgeopm_1_1_h_s_x_platform_imp.html',1,'geopm']]],
-  ['hsxplatformimp',['HSXPlatformImp',['../classgeopm_1_1_h_s_x_platform_imp.html#a71468ec8b48cc11a1496bce22f4776e6',1,'geopm::HSXPlatformImp']]],
-  ['hsxplatformimp_2ecpp',['HSXPlatformImp.cpp',['../_h_s_x_platform_imp_8cpp.html',1,'']]],
-  ['hsxplatformimp_2ehpp',['HSXPlatformImp.hpp',['../_h_s_x_platform_imp_8hpp.html',1,'']]]
+  ['hsxplatformimp',['HSXPlatformImp',['../classgeopm_1_1_h_s_x_platform_imp.html#a71468ec8b48cc11a1496bce22f4776e6',1,'geopm::HSXPlatformImp::HSXPlatformImp()'],['../classgeopm_1_1_h_s_x_platform_imp.html#a01af0a53e854bafe3b18ceb4d674846f',1,'geopm::HSXPlatformImp::HSXPlatformImp(int platform_id, const std::string &amp;model_name)']]],
+  ['hsxplatformimp',['HSXPlatformImp',['../classgeopm_1_1_h_s_x_platform_imp.html',1,'geopm']]]
 ];

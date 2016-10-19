@@ -83,26 +83,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h2>DISCLAIMER </h2>
 <p>SEE COPYING FILE FOR LICENSE INFORMATION.</p>
 <h2>LAST UPDATE </h2>
-<p>2016 May 05</p>
+<p>2016 July 1</p>
 <p>Christopher Cantalupo <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'r.m'+'.c'+'ant'+'al'+'upo'+'@i'+'nte'+'l.'+'com'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>er.m.<span style="display: none;">.nosp@m.</span>cant<span style="display: none;">.nosp@m.</span>alupo<span style="display: none;">.nosp@m.</span>@int<span style="display: none;">.nosp@m.</span>el.co<span style="display: none;">.nosp@m.</span>m</a> <br />
  Steve Sylvester <a href="#" onclick="location.href='mai'+'lto:'+'ste'+'ve'+'.s.'+'sy'+'lve'+'st'+'er@'+'in'+'tel'+'.c'+'om'; return false;">steve<span style="display: none;">.nosp@m.</span>.s.s<span style="display: none;">.nosp@m.</span>ylves<span style="display: none;">.nosp@m.</span>ter@<span style="display: none;">.nosp@m.</span>intel<span style="display: none;">.nosp@m.</span>.com</a></p>
 <h2>WEB PAGE </h2>
 <p><a href="http://geopm.github.io/geopm">http://geopm.github.io/geopm</a></p>
 <h2>SUMMARY </h2>
 <p>Global Energy Optimization Power Management (GEOPM) is an extensible power management framework targeting high performance computing. The library can be extended to support new control algorithms and new hardware power management features. The GEOPM package provides built in features ranging from static management of power policy for each individual compute node, to dynamic coordination of power policy and performance across all of the compute nodes hosting one MPI job on a portion of a distributed computing system. The dynamic coordination is implemented as a hierarchical control system for scalable communication and decentralized control. The hierarchical control system can optimize for various objective functions including maximizing global application performance within a power bound. The root of the control hierarchy tree can communicate through shared memory with the system resource management daemon to extend the hierarchy above the individual MPI job level and enable management of system power resources for multiple MPI jobs and multiple users by the system resource manager. The geopm package provides the libgeopm library, the libgeopmpolicy library, the geopmctl application and the geopmpolicy application. The libgeopm library can be called within MPI applications to enable application feedback for informing the control decisions. If modification of the target application is not desired then the geopmctl application can be run concurrently with the target application. In this case, target application feedback is inferred by querying the hardware through Model Specific Registers (MSRs). With either method (libgeopm or geopmctl), the control hierarchy tree writes processor power policy through MSRs to enact policy decisions. The libgeopmpolicy library is used by a resource manager to set energy policy control parameters for MPI jobs. Some features of libgeopmpolicy are available through the geopmpolicy application including support for static control.</p>
-<h2>BUILD REQUIREMENTS </h2>
+<h2>TRAVIS CI </h2>
+<p><a href="https://travis-ci.org/geopm/geopm">![Build Status](https://travis-ci.org/geopm/geopm.svg)</a></p>
+<p>The geopm public github project has been integrated with Travis continuous integration.</p>
+<p><a href="http://travis-ci.org/geopm/geopm">http://travis-ci.org/geopm/geopm</a></p>
+<p>All pull requests will be built and tested automatically by Travis. Additionally, pushes to the public dev and master branches which pass testing in Travis will trigger build and test in the OpenSUSE Build System (OBS) for a variety of Linux distributions. These provide yum and zypper repositories which can be used to install the geopm software.</p>
+<h2>INSTALL </h2>
+<p>The products of OBS triggered by Travis CI can be installed directly on a number of Linux distributions through yum or zypper. Build and test are currently passing on CentOS 7, RHEL 7, SLES 12, SLES 12-1, Fedora 21, Fedora 22 and Fedora 23. Release 0.2.0 is the first to include distribution on OBS. Pushes to the github public master branch are done only after a release has been tagged, and these tagged releases are published in yum and zypper repositories at the link below:</p>
+<p><a href="http://download.opensuse.org/repositories/home:/cmcantalupo:/geopm">http://download.opensuse.org/repositories/home:/cmcantalupo:/geopm</a></p>
+<p>The tagged releases should be more stable and more accurately documented than the tip of the public dev branch which is updated frequently. These frequent pushes to the public development branch can also be used as yum and zypper repositories. These are published at the link below:</p>
+<p><a href="http://download.opensuse.org/repositories/home:/cmcantalupo:/geopm-dev">http://download.opensuse.org/repositories/home:/cmcantalupo:/geopm-dev</a></p>
+<p>Use of these repositories should be helpful for developers of geopm who are willing to update the installed version frequently.</p>
+<h3>Red Hat</h3>
+<p>To install the yum repository follow the commands below. Select the DISTRO appropriate for you system. Select the BRANCH as "geopm" or "geopm-dev" to follow either the "master" or "dev" branches of repository hosted at <a href="http://github.com/geopm/geopm">http://github.com/geopm/geopm</a>. </p><pre class="fragment">DISTRO=# Select from: "CentOS_7" "RHEL7" "Fedora_21" "Fedora_22" "Fedora_23"
+BRANCH=# Select from: "geopm" or "geopm-dev"
+REPO=home:/cmcantalupo:
+wget http://download.opensuse.org/repositories/${REPO}/${BRANCH}/${DISTRO}/${REPO}${BRANCH}.repo
+sudo install --mode 644 ${REPO}${BRANCH}.repo /etc/yum.repos.d/${BRANCH}.repo
+unset DISTRO BRANCH REPO
+</pre><p>After the yum repository has been added, you can simply install geopm with yum: </p><pre class="fragment">sudo yum install geopm # For headers install geopm-devel
+</pre><p>To bring the system up to date with the tip of the public master or dev branch on github (depending on which "BRANCH" was selected when the yum repository was added: </p><pre class="fragment">sudo yum update geopm # For headers update geopm-devel
+</pre><h3>SUSE</h3>
+<p>To install the zypper repository follow the commands below. Select the DISTRO appropriate for you system. Select the BRANCH as "geopm" or "geopm-dev" to follow either the "master" or "dev" branches of repository hosted at <a href="http://github.com/geopm/geopm">http://github.com/geopm/geopm</a>. </p><pre class="fragment">DISTRO=# Select from: "SLES_12" "SLES_12-1"
+BRANCH=# Select from: "geopm" or "geopm-dev"
+REPO=home:/cmcantalupo:
+sudo zypper addrepo http://download.opensuse.org/repositories/${REPO}/${BRANCH}/${DISTRO}/${REPO}${BRANCH}.repo ${BRANCH}
+sudo zypper refresh
+unset DISTRO BRANCH REPO
+</pre><p>After the zypper repository has been added, you can simply install geopm with zypper: </p><pre class="fragment">sudo zypper install geopm # For headers install geopm-devel
+</pre><p>To bring the system up to date with the tip of the public master or dev branch on github (depending on which "BRANCH" was selected when the zypper repository was added: </p><pre class="fragment">sudo zypper update geopm # For headers update geopm-devel
+</pre><h2>BUILD REQUIREMENTS </h2>
+<p>In order to build the geopm package from source, the below requirements must be met.</p>
 <p>The geopm package requires a compiler that supports the MPI 2.2 and C++11 standards. These requirements can be met by using GCC version 4.7 or greater and installing the openmpi-devel package version 1.7 or greater on RHEL or SLES Linux. Additionally building the geopm package requires the json-c library and the hwloc library. Documentation creation including manpages further requires the rubygems package, and the ruby-devel package.</p>
-<p>SuSE: </p><pre class="fragment">zypper install openmpi-devel libjson-c-devel hwloc-devel ruby-devel rubygems
-</pre><p>RHEL: </p><pre class="fragment">yum install openmpi-devel json-c-devel hwloc-devel ruby-devel rubygems
+<p>RHEL: </p><pre class="fragment">yum install openmpi-devel json-c-devel hwloc-devel ruby-devel rubygems
+</pre><p>SUSE: </p><pre class="fragment">zypper install openmpi-devel libjson-c-devel hwloc-devel ruby-devel rubygems
 </pre><p>Alternatively these can be installed from source, and an alternate MPI implementation to OpenMPI can be selected. See </p><pre class="fragment">./configure --help
 </pre><p>for details on how to use non-standard install locations for build requirements through the </p><pre class="fragment">./configure --with-&lt;feature&gt;
 </pre><p>options.</p>
 <h2>BUILD INSTRUCTIONS </h2>
+<p>The source code can be rebuilt from the source RPMs available from the links in the INSTALL section using rpmbuild. To build from the git repository follow the instructions below.</p>
 <p>To build all targets and install it in a "build/geopm" subdirectory of your home directory run the following commands: </p><pre class="fragment">./autogen.sh
 ./configure --prefix=$HOME/build/geopm
 make
 make install
-</pre><p>An RPM can be created on a RHEL or SuSE system with the </p><pre class="fragment">make rpm
+</pre><p>An RPM can be created on a RHEL or SUSE system with the </p><pre class="fragment">make rpm
 </pre><p>target. Note that the &ndash;with-mpi-bin option may be required to inform configure about the location of the MPI compiler wrappers. The following command may be sufficient to determine the location: </p><pre class="fragment">dirname $(find /usr -name mpicc)
 </pre><p>To build in an environment without support for OpenMP (i.e. clang on Mac OS X) use the </p><pre class="fragment">./configure --disable-openmp
 </pre><p>option. The </p><pre class="fragment">./configure --disable-mpi
@@ -141,11 +172,11 @@ make install
 <tr>
 <td><a class="el" href="_global_policy_8cpp.html">GlobalPolicy.cpp</a> </td><td>488 </td><td>380 </td><td>78% </td></tr>
 <tr>
-<td><a class="el" href="_h_s_x_platform_imp_8cpp.html">HSXPlatformImp.cpp</a> </td><td>232 </td><td>175 </td><td>75% </td></tr>
+<td>HSXPlatformImp.cpp </td><td>232 </td><td>175 </td><td>75% </td></tr>
 <tr>
-<td><a class="el" href="_i_v_t_platform_imp_8cpp.html">IVTPlatformImp.cpp</a> </td><td>234 </td><td>177 </td><td>76% </td></tr>
+<td>IVTPlatformImp.cpp </td><td>234 </td><td>177 </td><td>76% </td></tr>
 <tr>
-<td><a class="el" href="_locking_hash_table_8hpp.html">LockingHashTable.hpp</a> </td><td>140 </td><td>119 </td><td>85% </td></tr>
+<td>LockingHashTable.hpp </td><td>140 </td><td>119 </td><td>85% </td></tr>
 <tr>
 <td>Observation.cpp </td><td>87 </td><td>75 </td><td>86% </td></tr>
 <tr>
@@ -205,6 +236,8 @@ make install
 <tr>
 <td>TOTAL </td><td>4373 </td><td>3152 </td><td>72% </td></tr>
 </table>
+<h2>ACKNOWLEDGMENTS </h2>
+<p>Development of the GEOPM software package has been partially funded through contract B609815 with Argonne National Laboratory. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

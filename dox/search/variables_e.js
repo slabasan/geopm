@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value',['value',['../structgeopm_1_1_locking_hash_table_1_1table__entry__s.html#ace5fb87dda4b23d38f13925bc0bc80e5',1,'geopm::LockingHashTable::table_entry_s']]]
+  ['signal',['signal',['../structgeopm__sample__message__s.html#ad074e2199f9b7f21000d2259cb036d9a',1,'geopm_sample_message_s::signal()'],['../structgeopm__msr__message__s.html#a11205037cb61f3c8ba6c38387fd35fdb',1,'geopm_msr_message_s::signal()'],['../structgeopm__telemetry__message__s.html#a08cc9723fd94778471826bfed910d0bb',1,'geopm_telemetry_message_s::signal()']]],
+  ['signal_5ftype',['signal_type',['../structgeopm__msr__message__s.html#a7a0a25484e03cf5f3a298462d4074859',1,'geopm_msr_message_s::signal_type()'],['../structgeopm_1_1geopm__signal__descriptor.html#ae4d83f05ef1efc3c1411884688b73137',1,'geopm::geopm_signal_descriptor::signal_type()']]]
 ];

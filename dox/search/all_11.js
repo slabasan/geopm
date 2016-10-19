@@ -1,8 +1,8 @@
 var searchData=
 [
   ['t',['t',['../structgeopm__time__s.html#a69112ff3a601269da02aa4cd6bd38997',1,'geopm_time_s']]],
-  ['table_5fentry_5fs',['table_entry_s',['../structgeopm_1_1_locking_hash_table_1_1table__entry__s.html',1,'geopm::LockingHashTable']]],
-  ['table_5flength',['table_length',['../classgeopm_1_1_locking_hash_table.html#a0130f4c53999fc7a4197716840e9543b',1,'geopm::LockingHashTable']]],
+  ['table_5fentry_5fs',['table_entry_s',['../structgeopm_1_1_profile_table_1_1table__entry__s.html',1,'geopm::ProfileTable']]],
+  ['table_5flength',['table_length',['../classgeopm_1_1_profile_table.html#a60aa1d7d61e8e15d2c62d1e7c8a09038',1,'geopm::ProfileTable']]],
   ['target',['target',['../classgeopm_1_1_region_policy.html#a045a289f3b04d5c3e88cf771b8c16311',1,'geopm::RegionPolicy::target(std::vector&lt; double &gt; &amp;target)'],['../classgeopm_1_1_region_policy.html#aeb1d1fe471f89eb994a10830476ede33',1,'geopm::RegionPolicy::target(int domain_idx, double &amp;target)'],['../classgeopm_1_1_policy.html#a872a9f8c0bb5a5f134cfb2b63c2896b3',1,'geopm::Policy::target(uint64_t region_id, std::vector&lt; double &gt; &amp;target)'],['../classgeopm_1_1_policy.html#ae3a9961b374546c0e19ea5cc964b0068',1,'geopm::Policy::target(uint64_t region_id, int domain, double &amp;target)']]],
   ['target_5fupdated',['target_updated',['../classgeopm_1_1_region_policy.html#a668194723b7b6472fa348b346e07a126',1,'geopm::RegionPolicy::target_updated()'],['../classgeopm_1_1_policy.html#ac91364a76402cd67b387f1ce354f2226',1,'geopm::Policy::target_updated()']]],
   ['target_5fvalid',['target_valid',['../classgeopm_1_1_region_policy.html#a3d6b83fd3a7897740eb35f8091a8cb08',1,'geopm::RegionPolicy::target_valid()'],['../classgeopm_1_1_policy.html#afaaebb3278a0a4098854977dee38c617',1,'geopm::Policy::target_valid()']]],
@@ -12,8 +12,8 @@ var searchData=
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['topology',['topology',['../classgeopm_1_1_platform.html#ad6d975868dcc4f15b48658a7bb7834f2',1,'geopm::Platform::topology()'],['../classgeopm_1_1_platform_imp.html#a247024a5a154573c164293b2b734cf6d',1,'geopm::PlatformImp::topology()']]],
   ['trace',['trace',['../classgeopm_1_1_environment.html#afe650c650af1a38656e97a80669acb9d',1,'geopm::Environment']]],
-  ['tracer',['Tracer',['../classgeopm_1_1_tracer.html',1,'geopm']]],
   ['tracer',['Tracer',['../classgeopm_1_1_tracer.html#a3e01c3cefe1350429d542b8278399350',1,'geopm::Tracer']]],
+  ['tracer',['Tracer',['../classgeopm_1_1_tracer.html',1,'geopm']]],
   ['tracer_2ecpp',['Tracer.cpp',['../_tracer_8cpp.html',1,'']]],
   ['tracer_2ehpp',['Tracer.hpp',['../_tracer_8hpp.html',1,'']]],
   ['transform_5frank_5fdata',['transform_rank_data',['../classgeopm_1_1_platform.html#a000f72f7b4773d088622fd41dae85871',1,'geopm::Platform']]],
@@ -22,6 +22,8 @@ var searchData=
   ['treecommunicator',['TreeCommunicator',['../classgeopm_1_1_tree_communicator.html',1,'geopm']]],
   ['treecommunicator_2ecpp',['TreeCommunicator.cpp',['../_tree_communicator_8cpp.html',1,'']]],
   ['treecommunicator_2ehpp',['TreeCommunicator.hpp',['../_tree_communicator_8hpp.html',1,'']]],
+  ['treecommunicatorbase',['TreeCommunicatorBase',['../classgeopm_1_1_tree_communicator_base.html#a9fd0d8c7297070e78c3a776990f96054',1,'geopm::TreeCommunicatorBase']]],
+  ['treecommunicatorbase',['TreeCommunicatorBase',['../classgeopm_1_1_tree_communicator_base.html',1,'geopm']]],
   ['treecommunicatorlevel',['TreeCommunicatorLevel',['../classgeopm_1_1_tree_communicator_level.html#a3dfe8e290d57fa47d9b29e9abd8383b5',1,'geopm::TreeCommunicatorLevel']]],
   ['treecommunicatorlevel',['TreeCommunicatorLevel',['../classgeopm_1_1_tree_communicator_level.html',1,'geopm']]]
 ];

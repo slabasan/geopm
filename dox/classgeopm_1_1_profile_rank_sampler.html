@@ -106,12 +106,11 @@ Collaboration diagram for geopm::ProfileRankSampler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_profile_rank_sampler__coll__graph.png" border="0" usemap="#geopm_1_1_profile_rank_sampler_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_profile_rank_sampler_coll__map" id="geopm_1_1_profile_rank_sampler_coll__map">
-<area shape="rect" id="node2" href="structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="5,205,173,231"/>
-<area shape="rect" id="node3" href="structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="31,112,140,137"/>
-<area shape="rect" id="node4" href="classgeopm_1_1_profile_table.html" title="ProfileTable class is a specific instantiation of the LockingHashTable class for dealing with applica..." alt="" coords="204,205,343,231"/>
-<area shape="rect" id="node5" href="classgeopm_1_1_locking_hash_table.html" title="geopm::LockingHashTable\l\&lt; struct geopm_prof_message_s \&gt;" alt="" coords="164,105,391,144"/>
-<area shape="rect" id="node6" href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="188,5,367,44"/>
-<area shape="rect" id="node7" href="classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="366,205,527,231"/>
+<area shape="rect" id="node2" href="structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="5,92,173,117"/>
+<area shape="rect" id="node5" href="structgeopm_1_1_profile_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="106,179,246,217"/>
+<area shape="rect" id="node3" href="structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="35,5,144,31"/>
+<area shape="rect" id="node4" href="classgeopm_1_1_profile_table.html" title="Container for multi&#45;threaded or multi&#45;process producer consumer data exchange. " alt="" coords="106,292,246,317"/>
+<area shape="rect" id="node6" href="classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="269,292,430,317"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -147,8 +146,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a80ef1b99600c3a6e3e41344f6eab763f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_profile_table.html">ProfileTable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a80ef1b99600c3a6e3e41344f6eab763f">m_table</a></td></tr>
 <tr class="memdesc:a80ef1b99600c3a6e3e41344f6eab763f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hash table which stores application process samples.  <a href="#a80ef1b99600c3a6e3e41344f6eab763f">More...</a><br /></td></tr>
 <tr class="separator:a80ef1b99600c3a6e3e41344f6eab763f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe8d18f596d09e796f333f807ecc72b4"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#abe8d18f596d09e796f333f807ecc72b4">m_agg_stats</a></td></tr>
-<tr class="separator:abe8d18f596d09e796f333f807ecc72b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae414bb75ffa52407d4c366f37205b9a7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#ae414bb75ffa52407d4c366f37205b9a7">m_region_entry</a></td></tr>
 <tr class="memdesc:ae414bb75ffa52407d4c366f37205b9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the initial state of the last region entered.  <a href="#ae414bb75ffa52407d4c366f37205b9a7">More...</a><br /></td></tr>
 <tr class="separator:ae414bb75ffa52407d4c366f37205b9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,27 +365,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="abe8d18f596d09e796f333f807ecc72b4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;uint64_t, struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a>&gt; geopm::ProfileRankSampler::m_agg_stats</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Holds aggregated performance data for each region of the application process. Used for post-process reporting. </p>
-
-</div>
-</div>
 <a class="anchor" id="aeb5ce34ee5fe4f1c7a08eee47d496f74"></a>
 <div class="memitem">
 <div class="memproto">

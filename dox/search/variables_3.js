@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flags',['flags',['../structgeopm__policy__message__s.html#aeda78a94c5f4e70f2b7e0f1bcfed49d0',1,'geopm_policy_message_s']]]
+  ['err',['err',['../structgeopm_1_1_platform_imp_1_1m__msr__batch__op.html#a083abcf1bb60af06a217dd1e9f49fe50',1,'geopm::PlatformImp::m_msr_batch_op']]]
 ];
