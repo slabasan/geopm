@@ -7,6 +7,7 @@ var searchData=
   ['environment',['Environment',['../classgeopm_1_1_environment.html#ae12fba3e8b7002bcebe4b5649f5fc60a',1,'geopm::Environment']]],
   ['environment',['Environment',['../classgeopm_1_1_environment.html',1,'geopm']]],
   ['environment_2ecpp',['Environment.cpp',['../_environment_8cpp.html',1,'']]],
+  ['epoch',['epoch',['../classgeopm_1_1_profile.html#aca2c31ba99953ba2f50b3a8dfcc83b4f',1,'geopm::Profile']]],
   ['err',['err',['../structgeopm_1_1_platform_imp_1_1m__msr__batch__op.html#a083abcf1bb60af06a217dd1e9f49fe50',1,'geopm::PlatformImp::m_msr_batch_op']]],
   ['err_5fvalue',['err_value',['../classgeopm_1_1_exception.html#ae5246edeac2fda764c071570ff2bebda',1,'geopm::Exception']]],
   ['exception',['Exception',['../classgeopm_1_1_exception.html',1,'geopm']]],

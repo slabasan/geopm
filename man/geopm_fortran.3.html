@@ -104,7 +104,7 @@
 <dt><code>integer(kind=c_int) function geopm_prof_progress(</code><em>prof</em><code>,</code> <em>region_id</em><code>,</code> <em>fraction</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
 <code>integer(kind=c_int64_t), value, intent(in) ::</code> <em>region_id</em> <br />
 <code>real(kind=c_double), value, intent(in) ::</code> <em>fraction</em></p></dd>
-<dt><code>integer(kind=c_int) function geopm_prof_outer_sync(</code><em>prof</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_epoch(</code><em>prof</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em></p></dd>
 <dt><code>integer(kind=c_int) function geopm_prof_disable(</code><em>prof</em><code>,</code> <em>feature_name</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
 <code>character(kind=c_char), intent(in) ::</code> <em>feature_name</em><code>(*)</code></p></dd>
 <dt><code>integer(kind=c_int) function geopm_tprof_create(</code><em>num_thread</em><code>,</code> <em>num_iter</em><code>,</code> <em>chunk_size</em><code>,</code> <em>tprof</em><code>)</code></dt><dd><p><code>integer(kind=c_int), value, intent(in) ::</code> <em>num_thread</em> <br />

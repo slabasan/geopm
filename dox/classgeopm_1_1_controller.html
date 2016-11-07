@@ -162,8 +162,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a88981c5e426a4fecd70f621236c56937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eead3ea7f89d0c20b59afbe4fd01203"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a6eead3ea7f89d0c20b59afbe4fd01203">update_region</a> (void)</td></tr>
 <tr class="separator:a6eead3ea7f89d0c20b59afbe4fd01203"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeabdf357f7ec69fd2403f7010f9899f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#aeabdf357f7ec69fd2403f7010f9899f4">update_outer_sync</a> (std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt; &amp;telemetry)</td></tr>
-<tr class="separator:aeabdf357f7ec69fd2403f7010f9899f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f9894d000a633eeaa8dcbb1913f1f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ae2f9894d000a633eeaa8dcbb1913f1f1">update_epoch</a> (std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt; &amp;telemetry)</td></tr>
+<tr class="separator:ae2f9894d000a633eeaa8dcbb1913f1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -234,8 +234,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5712a9c19474d0bbc4712bb8f2fee21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf2c0f2ec64a577f5d8594f2ffe7c69f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#adf2c0f2ec64a577f5d8594f2ffe7c69f">m_rank_per_node</a></td></tr>
 <tr class="separator:adf2c0f2ec64a577f5d8594f2ffe7c69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9e2c89100d5d42e71b81ac398822dba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ae9e2c89100d5d42e71b81ac398822dba">m_outer_sync_time</a></td></tr>
-<tr class="separator:ae9e2c89100d5d42e71b81ac398822dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05e05cb31b723e1c751bb3d314c3cf37"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a05e05cb31b723e1c751bb3d314c3cf37">m_epoch_time</a></td></tr>
+<tr class="separator:a05e05cb31b723e1c751bb3d314c3cf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8adfc8348e9fe4a10b4ccb32bf49adb3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a8adfc8348e9fe4a10b4ccb32bf49adb3">m_mpi_sync_time</a></td></tr>
 <tr class="separator:a8adfc8348e9fe4a10b4ccb32bf49adb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a4782ceb5dc2948a22345c51bdd1a7c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a3a4782ceb5dc2948a22345c51bdd1a7c">m_mpi_agg_time</a></td></tr>
@@ -588,7 +588,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeabdf357f7ec69fd2403f7010f9899f4"></a>
+<a class="anchor" id="ae2f9894d000a633eeaa8dcbb1913f1f1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -596,7 +596,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::Controller::update_outer_sync </td>
+          <td class="memname">void geopm::Controller::update_epoch </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>telemetry</em></td><td>)</td>
@@ -794,6 +794,26 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool geopm::Controller::m_do_shutdown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a05e05cb31b723e1c751bb3d314c3cf37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Controller::m_epoch_time</td>
         </tr>
       </table>
   </td>
@@ -1074,26 +1094,6 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;uint64_t&gt; geopm::Controller::m_num_mpi_enter</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae9e2c89100d5d42e71b81ac398822dba"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double geopm::Controller::m_outer_sync_time</td>
         </tr>
       </table>
   </td>

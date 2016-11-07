@@ -260,6 +260,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>m_entry_time
 : <a class="el" href="classgeopm_1_1_sample_scheduler.html#af8d190adce82eda5f69e6c758a7db88c">geopm::SampleScheduler</a>
 </li>
+<li>m_epoch_entry
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#afc53f8071706122343e5a5c1f4f17f69">geopm::ProfileRankSampler</a>
+</li>
+<li>m_epoch_time
+: <a class="el" href="classgeopm_1_1_controller.html#a05e05cb31b723e1c751bb3d314c3cf37">geopm::Controller</a>
+</li>
 <li>M_EVENT_SEL_0
 : <a class="el" href="classgeopm_1_1_k_n_l_platform_imp.html#aa2a63c6c0b74c7e12be72069669110c4">geopm::KNLPlatformImp</a>
 , <a class="el" href="classgeopm_1_1_xeon_platform_imp.html#ad540763285305de999ddbea4993aec10">geopm::XeonPlatformImp</a>
@@ -275,12 +281,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgeopm_1_1_tree_communicator.html#aae2d22eb3cbd901a8e0a5d3581d9c80b">geopm::TreeCommunicator</a>
 </li>
 <li>m_flags
-: <a class="el" href="classgeopm_1_1_global_policy.html#a18631cf7ae3ad369879ce3fbe6a31521">geopm::GlobalPolicy</a>
-, <a class="el" href="classgeopm_1_1_policy_flags.html#ab8d0c841d9b8bddea9b8f20725eb32f3">geopm::PolicyFlags</a>
+: <a class="el" href="classgeopm_1_1_policy_flags.html#ab8d0c841d9b8bddea9b8f20725eb32f3">geopm::PolicyFlags</a>
+, <a class="el" href="classgeopm_1_1_global_policy.html#a18631cf7ae3ad369879ce3fbe6a31521">geopm::GlobalPolicy</a>
 </li>
 <li>m_global_policy
-: <a class="el" href="classgeopm_1_1_tree_communicator.html#a9cac663d6711f98445329b87791eddbe">geopm::TreeCommunicator</a>
-, <a class="el" href="classgeopm_1_1_controller.html#af1fa25f7bbb4fffea059692b1621af73">geopm::Controller</a>
+: <a class="el" href="classgeopm_1_1_controller.html#af1fa25f7bbb4fffea059692b1621af73">geopm::Controller</a>
+, <a class="el" href="classgeopm_1_1_tree_communicator.html#a9cac663d6711f98445329b87791eddbe">geopm::TreeCommunicator</a>
 </li>
 <li>m_head
 : <a class="el" href="classgeopm_1_1_circular_buffer.html#ab370cbd69ba07c997852be6c2d6d6ab1">geopm::CircularBuffer&lt; type &gt;</a>
@@ -506,10 +512,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgeopm_1_1_platform_imp.html#ac4a8d9768a34820fdc19962b0f513967">geopm::PlatformImp</a>
 </li>
 <li>m_num_domain
-: <a class="el" href="classgeopm_1_1_platform.html#ac89adc8aa4d421d1f1c742ef2ab3c864">geopm::Platform</a>
+: <a class="el" href="classgeopm_1_1_region.html#a331f11992d350f967774908d876440a9">geopm::Region</a>
+, <a class="el" href="classgeopm_1_1_platform.html#ac89adc8aa4d421d1f1c742ef2ab3c864">geopm::Platform</a>
 , <a class="el" href="classgeopm_1_1_region_policy.html#a659ff6e109a7d1ff119511908db47f67">geopm::RegionPolicy</a>
 , <a class="el" href="classgeopm_1_1_policy.html#a3220640e2d998409e52b2c49def7a740">geopm::Policy</a>
-, <a class="el" href="classgeopm_1_1_region.html#a331f11992d350f967774908d876440a9">geopm::Region</a>
 </li>
 <li>m_num_energy_domain
 : <a class="el" href="classgeopm_1_1_platform.html#ad4f6cdaf68c2da4ea3c1e2a22b6b7b85">geopm::Platform</a>
@@ -565,8 +571,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgeopm_1_1_profile_thread.html#acf20f4cbc7d472512855bbf45ca033e4">geopm::ProfileThread</a>
 </li>
 <li>m_num_tile
-: <a class="el" href="classgeopm_1_1_platform_imp.html#a3b6035e8294867fa99577ffd440ee5be">geopm::PlatformImp</a>
-, <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#aad49e125378cf49ab6a57ec5a8b195b6">geopm::RAPLPlatform</a>
+: <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#aad49e125378cf49ab6a57ec5a8b195b6">geopm::RAPLPlatform</a>
+, <a class="el" href="classgeopm_1_1_platform_imp.html#a3b6035e8294867fa99577ffd440ee5be">geopm::PlatformImp</a>
 </li>
 <li>m_num_tile_group
 : <a class="el" href="classgeopm_1_1_platform_imp.html#adf80f2cbbf8348b166d1a27eaa800bba">geopm::PlatformImp</a>
@@ -576,12 +582,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>m_out_config
 : <a class="el" href="classgeopm_1_1_global_policy.html#ac5ebccb0863f33dc471de81c29ca70e6">geopm::GlobalPolicy</a>
-</li>
-<li>m_outer_sync_entry
-: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a3e506442d4f3c8487b0c5d7f2e49c5c1">geopm::ProfileRankSampler</a>
-</li>
-<li>m_outer_sync_time
-: <a class="el" href="classgeopm_1_1_controller.html#ae9e2c89100d5d42e71b81ac398822dba">geopm::Controller</a>
 </li>
 <li>m_overhead_frac
 : <a class="el" href="classgeopm_1_1_sample_scheduler.html#a4c57371eaf33d5c0003208c1ad2e9b2d">geopm::SampleScheduler</a>
@@ -799,8 +799,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgeopm_1_1_region.html#a2a64676ec42862e0c3e3def4eb019a0a">geopm::Region</a>
 </li>
 <li>m_table
-: <a class="el" href="classgeopm_1_1_profile.html#a7bd0a09d192ebed86941d7f232c604a0">geopm::Profile</a>
-, <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a80ef1b99600c3a6e3e41344f6eab763f">geopm::ProfileRankSampler</a>
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a80ef1b99600c3a6e3e41344f6eab763f">geopm::ProfileRankSampler</a>
+, <a class="el" href="classgeopm_1_1_profile.html#a7bd0a09d192ebed86941d7f232c604a0">geopm::Profile</a>
 , <a class="el" href="classgeopm_1_1_profile_table.html#a40b61b7a3abfbd27cedc1778053249b2">geopm::ProfileTable</a>
 </li>
 <li>m_table_buffer
@@ -810,8 +810,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgeopm_1_1_profile_table.html#a01f8a51df6d8af731557e4607743eb2f">geopm::ProfileTable</a>
 </li>
 <li>m_table_shmem
-: <a class="el" href="classgeopm_1_1_profile.html#a9ad34df0dc5bac8298a7fa648d4db7bf">geopm::Profile</a>
-, <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a4348a96bb0a507cd6b608d80e304f994">geopm::ProfileRankSampler</a>
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a4348a96bb0a507cd6b608d80e304f994">geopm::ProfileRankSampler</a>
+, <a class="el" href="classgeopm_1_1_profile.html#a9ad34df0dc5bac8298a7fa648d4db7bf">geopm::Profile</a>
 </li>
 <li>m_table_size
 : <a class="el" href="classgeopm_1_1_profile_sampler.html#ae6748c9f49b7161b73029b7b766848f3">geopm::ProfileSampler</a>

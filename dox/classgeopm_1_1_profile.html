@@ -130,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abac1cf3e464c72d4ba6cc56012934f94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#abac1cf3e464c72d4ba6cc56012934f94">progress</a> (uint64_t region_id, double fraction)</td></tr>
 <tr class="memdesc:abac1cf3e464c72d4ba6cc56012934f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal fractional progress through a region.  <a href="#abac1cf3e464c72d4ba6cc56012934f94">More...</a><br/></td></tr>
 <tr class="separator:abac1cf3e464c72d4ba6cc56012934f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd5b59960396b88f4fc8d086dbeac57a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#abd5b59960396b88f4fc8d086dbeac57a">outer_sync</a> (void)</td></tr>
-<tr class="memdesc:abd5b59960396b88f4fc8d086dbeac57a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal entry to global barrier.  <a href="#abd5b59960396b88f4fc8d086dbeac57a">More...</a><br/></td></tr>
-<tr class="separator:abd5b59960396b88f4fc8d086dbeac57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2c31ba99953ba2f50b3a8dfcc83b4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#aca2c31ba99953ba2f50b3a8dfcc83b4f">epoch</a> (void)</td></tr>
+<tr class="memdesc:aca2c31ba99953ba2f50b3a8dfcc83b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal pass through outer loop.  <a href="#aca2c31ba99953ba2f50b3a8dfcc83b4f">More...</a><br/></td></tr>
+<tr class="separator:aca2c31ba99953ba2f50b3a8dfcc83b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef228fd1da735371c3e354e74c3e8796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#aef228fd1da735371c3e354e74c3e8796">disable</a> (const std::string feature_name)</td></tr>
 <tr class="memdesc:aef228fd1da735371c3e354e74c3e8796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a data collection feature.  <a href="#aef228fd1da735371c3e354e74c3e8796">More...</a><br/></td></tr>
 <tr class="separator:aef228fd1da735371c3e354e74c3e8796"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +206,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a9e908c5cd7dc553fe37a0f31f1f30699"><td class="mdescLeft">&#160;</td><td class="mdescRight">The process's rank in m_shm_comm.  <a href="#a9e908c5cd7dc553fe37a0f31f1f30699">More...</a><br/></td></tr>
 <tr class="separator:a9e908c5cd7dc553fe37a0f31f1f30699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addb264383599ef98a6ec3821146c61c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#addb264383599ef98a6ec3821146c61c3">m_is_first_sync</a></td></tr>
-<tr class="memdesc:addb264383599ef98a6ec3821146c61c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the first call to outer_sync.  <a href="#addb264383599ef98a6ec3821146c61c3">More...</a><br/></td></tr>
+<tr class="memdesc:addb264383599ef98a6ec3821146c61c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the first call to epoch.  <a href="#addb264383599ef98a6ec3821146c61c3">More...</a><br/></td></tr>
 <tr class="separator:addb264383599ef98a6ec3821146c61c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf61dcc95360dbf3f06f720d7a7b7599"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#acf61dcc95360dbf3f06f720d7a7b7599">m_parent_region</a></td></tr>
 <tr class="separator:acf61dcc95360dbf3f06f720d7a7b7599"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,7 +217,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Enables application profiling and application feedback to the control algorithm. </p>
-<p>The information gathered by the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> class identifies regions of code, progress within regions, and global synchronization points in the application. Regions of code define periods in the application during which control parameters are tuned with the expectation that control parameters for a region can be optimized independently of other regions. In this way a region is associated with a set of control parameters which can be optimized, and future time intervals associated with the same region will benefit from the application of control parameters which were determined from tuning within previous occurrences of the region. There are two competing motivations for defining a region within the application. The first is to identify a section of code that has distinct compute, memory or network characteristics. The second is to avoid defining these regions such that they are nested within each other, as nested regions are ignored, and only the outer most region is used for tuning when nesting occurs. Identifying progress within a region can be used to alleviate load imbalance in the application under the assumption that the region is bulk synchronous. Under the assumption that the application employs an iterative algorithm which synchronizes periodically the user can alleviate load imbalance on larger time scales than the regions provide. This is done by marking the end of the outer most loop, or the "outer synchronization point."</p>
+<p>The information gathered by the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> class identifies regions of code, progress within regions, and global synchronization points in the application. Regions of code define periods in the application during which control parameters are tuned with the expectation that control parameters for a region can be optimized independently of other regions. In this way a region is associated with a set of control parameters which can be optimized, and future time intervals associated with the same region will benefit from the application of control parameters which were determined from tuning within previous occurrences of the region. There are two competing motivations for defining a region within the application. The first is to identify a section of code that has distinct compute, memory or network characteristics. The second is to avoid defining these regions such that they are nested within each other, as nested regions are ignored, and only the outer most region is used for tuning when nesting occurs. Identifying progress within a region can be used to alleviate load imbalance in the application under the assumption that the region is bulk synchronous. Under the assumption that the application employs an iterative algorithm which synchronizes periodically the user can alleviate load imbalance on larger time scales than the regions provide. This is done by marking the end of the outer most loop, or the "epoch."</p>
 <p>The <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> class is the C++ implementation of the computational application side interface to the GEOPM profiler. The class methods support the C interface defined for use with the geopm_prof_c structure and are named accordingly. The geopm_prof_c structure is an opaque reference to the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> class. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="afc31bf54c063f64098bcc3e512f70875"></a>
@@ -352,6 +352,25 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aca2c31ba99953ba2f50b3a8dfcc83b4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Profile::epoch </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Signal pass through outer loop. </p>
+<p>Called once for each pass through the outer most computational loop executed by the application. This function call should occur exactly once in the application source at the beginning of the loop that encapsulates the primary computational region of the application. </p>
+
+</div>
+</div>
 <a class="anchor" id="a57347e82375c14f3d56810924e3359e9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -401,25 +420,6 @@ Protected Attributes</h2></td></tr>
 
 <p>Fill in rank affinity list. </p>
 <p>Uses hwloc to determine the cpuset the current process is bound to. This information is used to fill in a set containing all CPUs we can run on. This is used to communicate with the geopm runtime the number of ranks as well as their affinity masks. </p>
-
-</div>
-</div>
-<a class="anchor" id="abd5b59960396b88f4fc8d086dbeac57a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::Profile::outer_sync </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Signal entry to global barrier. </p>
-<p>Called just prior to the highest level global synchronization point in an application. This occurs in the application's outermost loop in an iterative algorithm just prior to the last synchronizing MPI call. There should be just one place in an application code where this call occurs, and it should be called repeatedly inside of a loop. </p>
 
 </div>
 </div>
@@ -711,7 +711,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Tracks the first call to outer_sync. </p>
+<p>Tracks the first call to epoch. </p>
 
 </div>
 </div>

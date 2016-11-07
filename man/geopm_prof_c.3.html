@@ -87,7 +87,7 @@
 <dt><code>int geopm_prof_exit(</code></dt><dd><p><code>uint64_t</code> <em>region_id</em>);</p></dd>
 <dt><code>int geopm_prof_progress(</code></dt><dd><p><code>uint64_t</code> <em>region_id</em>, <br />
 <code>double</code> <em>fraction</em>);</p></dd>
-<dt><code>int geopm_prof_outer_sync(</code></dt><dd><p>`void);</p></dd>
+<dt><code>int geopm_prof_epoch(</code></dt><dd><p>`void);</p></dd>
 <dt><code>int geopm_prof_disable(</code></dt><dd><p><code>const char *</code><em>feature_name</em>);</p></dd>
 <dt><code>int geopm_tprof_create(</code></dt><dd><p><code>int</code> <em>num_thread</em>, <br />
 <code>size_t</code> <em>num_iter</em>, <br />
@@ -123,7 +123,7 @@ under the assumption that the region is bulk synchronous.  Under the
 assumption that the application employs an iterative algorithm which
 synchronizes periodically the user can alleviate load imbalance on
 larger time scales than the regions provide.  This is done by marking
-the end of the outer most loop, or the "outer synchronization point."</p>
+the end of the outer most loop, or the "epoch."</p>
 
 <dl>
 <dt><code>geopm_prof_region</code>()</dt><dd><p>registers an application region.  The <em>region_name</em> and
@@ -155,12 +155,11 @@ required to complete the region where <em>fraction</em> is between 0 and 1.
 If the <em>region_id</em> does not match the <em>region_id</em> of the last
 call to geopm_prof_prof_enter() which was not nested, then this
 call is ignored and an error code is returned.</p></dd>
-<dt><code>geopm_prof_outer_sync</code>()</dt><dd><p>is called just prior to the highest level global synchronization
-point in an application.  This occurs in the application's
-outermost loop in an iterative algorithm just prior to the last
-synchronizing MPI call.  There should be just one place in an
-application code where this call occurs, and it should be called
-repeatedly inside of a loop.</p></dd>
+<dt><code>geopm_prof_epoch</code>()</dt><dd><p>is called once for each pass through the outer most computational
+loop executed by the application.  This function call should occur
+exactly once in the application source at the beginning of the loop
+that encapsulates the primary computational region of the
+application.</p></dd>
 <dt><code>geopm_prof_disable</code>()</dt><dd><p>is called at application start up to disable a profiling feature.
 By default all profiling features available on the system are
 enabled.  The set of all possible values for <em>feature_name</em> are:
