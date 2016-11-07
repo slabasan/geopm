@@ -1,7 +1,7 @@
 <map id="geopm::ProfileRankSampler" name="geopm::ProfileRankSampler">
-<area shape="rect" id="node2" href="$structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="5,92,173,117"/>
-<area shape="rect" id="node5" href="$structgeopm_1_1_profile_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="106,179,246,217"/>
-<area shape="rect" id="node3" href="$structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="35,5,144,31"/>
-<area shape="rect" id="node4" href="$classgeopm_1_1_profile_table.html" title="Container for multi&#45;threaded or multi&#45;process producer consumer data exchange. " alt="" coords="106,292,246,317"/>
-<area shape="rect" id="node6" href="$classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="269,292,430,317"/>
+<area shape="rect" id="node2" href="$structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="5,96,168,123"/>
+<area shape="rect" id="node5" href="$structgeopm_1_1_profile_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="103,187,241,229"/>
+<area shape="rect" id="node3" href="$structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="33,5,140,32"/>
+<area shape="rect" id="node4" href="$classgeopm_1_1_profile_table.html" title="Container for multi&#45;threaded or multi&#45;process producer consumer data exchange. " alt="" coords="103,307,241,333"/>
+<area shape="rect" id="node6" href="$classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="265,307,423,333"/>
 </map>

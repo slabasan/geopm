@@ -1,9 +1,9 @@
 <map id="geopm::Profile" name="geopm::Profile">
-<area shape="rect" id="node2" href="$classgeopm_1_1_profile_table.html" title="Container for multi&#45;threaded or multi&#45;process producer consumer data exchange. " alt="" coords="929,16,1069,41"/>
-<area shape="rect" id="node3" href="$structgeopm_1_1_profile_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="637,5,777,44"/>
-<area shape="rect" id="node4" href="$structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="247,15,415,40"/>
-<area shape="rect" id="node5" href="$structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="5,43,114,68"/>
-<area shape="rect" id="node7" href="$classgeopm_1_1_sample_scheduler.html" title="SampleSchecduler class encapsulates functionality to schedule and regulate the frequency of applicati..." alt="" coords="439,67,613,92"/>
-<area shape="rect" id="node6" href="$structgeopm__ctl__message__s.html" title="Structure intended to be shared between the geopm runtime and the application in order to convey stat..." alt="" coords="920,120,1078,145"/>
-<area shape="rect" id="node8" href="$classgeopm_1_1_shared_memory_user.html" title="This class encapsulates attaching to inter&#45;process shared memory. " alt="" coords="905,173,1093,199"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_profile_table.html" title="Container for multi&#45;threaded or multi&#45;process producer consumer data exchange. " alt="" coords="920,16,1059,43"/>
+<area shape="rect" id="node3" href="$structgeopm_1_1_profile_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="629,5,768,46"/>
+<area shape="rect" id="node4" href="$structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="246,15,410,41"/>
+<area shape="rect" id="node5" href="$structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="5,41,112,68"/>
+<area shape="rect" id="node7" href="$classgeopm_1_1_sample_scheduler.html" title="SampleSchecduler class encapsulates functionality to schedule and regulate the frequency of applicati..." alt="" coords="435,67,605,93"/>
+<area shape="rect" id="node6" href="$structgeopm__ctl__message__s.html" title="Structure intended to be shared between the geopm runtime and the application in order to convey stat..." alt="" coords="911,121,1067,148"/>
+<area shape="rect" id="node8" href="$classgeopm_1_1_shared_memory_user.html" title="This class encapsulates attaching to inter&#45;process shared memory. " alt="" coords="897,176,1082,203"/>
 </map>

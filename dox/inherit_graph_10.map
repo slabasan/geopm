@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfacegeopm_1_1geopm__ctl__create.html" title="Fortran interface to geopm_ctl_create C function. " alt="" coords="5,5,181,31"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_exception.html" title="Class for all geopm specific exceptions. " alt="" coords="153,5,279,32"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_signal_exception.html" title="geopm::SignalException" alt="" coords="328,5,491,32"/>
 </map>

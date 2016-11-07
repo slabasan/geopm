@@ -1,7 +1,7 @@
 <map id="geopm::XeonPlatformImp" name="geopm::XeonPlatformImp">
-<area shape="rect" id="node3" href="$classgeopm_1_1_h_s_x_platform_imp.html" title="This class provides a concrete platform implementation of Haswell E processors: cpuid=0x63F. " alt="" coords="5,152,174,177"/>
-<area shape="rect" id="node5" href="$classgeopm_1_1_s_n_b_platform_imp.html" title="This class provides a concrete platform implementation of Sandybridge E processors: cpuid=0x62D..." alt="" coords="199,152,367,177"/>
-<area shape="rect" id="node2" href="$classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="115,5,256,31"/>
-<area shape="rect" id="node4" href="$classgeopm_1_1_b_d_x_platform_imp.html" title="geopm::BDXPlatformImp" alt="" coords="5,225,174,251"/>
-<area shape="rect" id="node6" href="$classgeopm_1_1_i_v_t_platform_imp.html" title="This class provides a concrete platform implementation of IvyBridge E processors: cpuid=0x63E..." alt="" coords="202,225,364,251"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_h_s_x_platform_imp.html" title="This class provides a concrete platform implementation of Haswell E processors: cpuid=0x63F. " alt="" coords="5,155,173,181"/>
+<area shape="rect" id="node5" href="$classgeopm_1_1_s_n_b_platform_imp.html" title="This class provides a concrete platform implementation of Sandybridge E processors: cpuid=0x62D..." alt="" coords="197,155,365,181"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="115,5,255,32"/>
+<area shape="rect" id="node4" href="$classgeopm_1_1_b_d_x_platform_imp.html" title="geopm::BDXPlatformImp" alt="" coords="5,229,173,256"/>
+<area shape="rect" id="node6" href="$classgeopm_1_1_i_v_t_platform_imp.html" title="This class provides a concrete platform implementation of IvyBridge E processors: cpuid=0x63E..." alt="" coords="201,229,361,256"/>
 </map>

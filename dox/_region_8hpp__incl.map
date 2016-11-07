@@ -1,10 +1,10 @@
 <map id="src/Region.hpp" name="src/Region.hpp">
-<area shape="rect" id="node5" href="$_policy_8hpp.html" title="Policy.hpp" alt="" coords="570,79,652,104"/>
-<area shape="rect" id="node18" href="$_circular_buffer_8hpp.html" title="CircularBuffer.hpp" alt="" coords="322,79,450,104"/>
-<area shape="rect" id="node9" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="693,152,828,177"/>
-<area shape="rect" id="node15" href="$_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="553,152,669,177"/>
-<area shape="rect" id="node11" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="673,225,779,251"/>
-<area shape="rect" id="node16" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="525,225,639,251"/>
-<area shape="rect" id="node20" href="$_exception_8hpp.html" title="Exception.hpp" alt="" coords="143,152,249,177"/>
-<area shape="rect" id="node22" href="$geopm__error_8h.html" title="geopm_error.h" alt="" coords="206,225,314,251"/>
+<area shape="rect" id="node5" href="$_policy_8hpp.html" title="Policy.hpp" alt="" coords="569,80,652,107"/>
+<area shape="rect" id="node18" href="$_circular_buffer_8hpp.html" title="CircularBuffer.hpp" alt="" coords="321,80,447,107"/>
+<area shape="rect" id="node9" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="693,155,824,181"/>
+<area shape="rect" id="node15" href="$_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="553,155,668,181"/>
+<area shape="rect" id="node11" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="672,229,776,256"/>
+<area shape="rect" id="node16" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="522,229,635,256"/>
+<area shape="rect" id="node20" href="$_exception_8hpp.html" title="Exception.hpp" alt="" coords="143,155,248,181"/>
+<area shape="rect" id="node22" href="$geopm__error_8h.html" title="geopm_error.h" alt="" coords="207,229,312,256"/>
 </map>

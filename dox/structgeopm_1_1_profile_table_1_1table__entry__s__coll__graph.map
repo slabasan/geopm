@@ -1,4 +1,4 @@
 <map id="geopm::ProfileTable::table_entry_s" name="geopm::ProfileTable::table_entry_s">
-<area shape="rect" id="node2" href="$structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="5,92,173,117"/>
-<area shape="rect" id="node3" href="$structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="35,5,144,31"/>
+<area shape="rect" id="node2" href="$structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="5,96,168,123"/>
+<area shape="rect" id="node3" href="$structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="33,5,140,32"/>
 </map>

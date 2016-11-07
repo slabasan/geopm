@@ -1,11 +1,11 @@
 <map id="src/geopm_env.h" name="src/geopm_env.h">
-<area shape="rect" id="node2" href="$_environment_8cpp.html" title="src/Environment.cpp" alt="" coords="5,79,148,104"/>
-<area shape="rect" id="node3" href="$_exception_8cpp.html" title="src/Exception.cpp" alt="" coords="172,79,299,104"/>
-<area shape="rect" id="node4" href="$geopm__plugin_8c.html" title="src/geopm_plugin.c" alt="" coords="323,79,460,104"/>
-<area shape="rect" id="node5" href="$geopm__pmpi_8c.html" title="src/geopm_pmpi.c" alt="" coords="484,79,614,104"/>
-<area shape="rect" id="node6" href="$geopmctl__main_8c.html" title="src/geopmctl_main.c" alt="" coords="638,79,782,104"/>
-<area shape="rect" id="node7" href="$_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="807,79,912,104"/>
-<area shape="rect" id="node8" href="$_signal_handler_8cpp.html" title="src/SignalHandler.cpp" alt="" coords="936,79,1087,104"/>
-<area shape="rect" id="node9" href="$_tracer_8cpp.html" title="src/Tracer.cpp" alt="" coords="1111,79,1216,104"/>
-<area shape="rect" id="node10" href="$_tree_communicator_8cpp.html" title="src/TreeCommunicator.cpp" alt="" coords="1240,79,1421,104"/>
+<area shape="rect" id="node2" href="$_environment_8cpp.html" title="src/Environment.cpp" alt="" coords="5,80,147,107"/>
+<area shape="rect" id="node3" href="$_exception_8cpp.html" title="src/Exception.cpp" alt="" coords="171,80,297,107"/>
+<area shape="rect" id="node4" href="$geopm__plugin_8c.html" title="src/geopm_plugin.c" alt="" coords="322,80,456,107"/>
+<area shape="rect" id="node5" href="$geopm__pmpi_8c.html" title="src/geopm_pmpi.c" alt="" coords="481,80,609,107"/>
+<area shape="rect" id="node6" href="$geopmctl__main_8c.html" title="src/geopmctl_main.c" alt="" coords="634,80,776,107"/>
+<area shape="rect" id="node7" href="$_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="801,80,908,107"/>
+<area shape="rect" id="node8" href="$_signal_handler_8cpp.html" title="src/SignalHandler.cpp" alt="" coords="933,80,1083,107"/>
+<area shape="rect" id="node9" href="$_tracer_8cpp.html" title="src/Tracer.cpp" alt="" coords="1108,80,1215,107"/>
+<area shape="rect" id="node10" href="$_tree_communicator_8cpp.html" title="src/TreeCommunicator.cpp" alt="" coords="1239,80,1419,107"/>
 </map>

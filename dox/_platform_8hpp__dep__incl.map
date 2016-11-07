@@ -1,10 +1,10 @@
 <map id="src/Platform.hpp" name="src/Platform.hpp">
-<area shape="rect" id="node2" href="$_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="179,79,341,104"/>
-<area shape="rect" id="node5" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="5,152,146,177"/>
-<area shape="rect" id="node6" href="$_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="320,152,437,177"/>
-<area shape="rect" id="node8" href="$_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="466,79,619,104"/>
-<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="170,152,296,177"/>
-<area shape="rect" id="node7" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="462,152,623,177"/>
-<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="171,225,296,251"/>
-<area shape="rect" id="node9" href="$_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="648,152,800,177"/>
+<area shape="rect" id="node2" href="$_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="181,80,344,107"/>
+<area shape="rect" id="node5" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="5,155,147,181"/>
+<area shape="rect" id="node6" href="$_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="322,155,440,181"/>
+<area shape="rect" id="node8" href="$_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="470,80,623,107"/>
+<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="172,155,297,181"/>
+<area shape="rect" id="node7" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="465,155,628,181"/>
+<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="172,229,297,256"/>
+<area shape="rect" id="node9" href="$_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="653,155,805,181"/>
 </map>

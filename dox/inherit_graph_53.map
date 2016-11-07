@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classgeopm_1_1_tree_communicator_level.html" title="TreeCommunicatorLevel class encapsulates communication functionality on a per&#45;level basis..." alt="" coords="5,5,220,31"/>
+<area shape="rect" id="node1" href="$classgeopm_1_1_tree_communicator_base.html" title="Class which enables inter&#45;process communication for geopm. " alt="" coords="5,31,216,57"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_single_tree_communicator.html" title="geopm::SingleTreeCommunicator" alt="" coords="264,5,480,32"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_tree_communicator.html" title="geopm::TreeCommunicator" alt="" coords="282,56,462,83"/>
 </map>

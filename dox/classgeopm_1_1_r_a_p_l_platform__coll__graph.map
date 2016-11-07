@@ -1,8 +1,8 @@
 <map id="geopm::RAPLPlatform" name="geopm::RAPLPlatform">
-<area shape="rect" id="node2" href="$classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im..." alt="" coords="157,299,276,324"/>
-<area shape="rect" id="node3" href="$classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="146,205,287,231"/>
-<area shape="rect" id="node4" href="$structgeopm_1_1_platform_imp_1_1m__msr__batch__array.html" title="geopm::PlatformImp\l::m_msr_batch_array" alt="" coords="5,105,153,144"/>
-<area shape="rect" id="node5" href="$structgeopm_1_1_platform_imp_1_1m__msr__batch__op.html" title="geopm::PlatformImp\l::m_msr_batch_op" alt="" coords="8,5,150,44"/>
-<area shape="rect" id="node6" href="$classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="177,112,349,137"/>
-<area shape="rect" id="node7" href="$structgeopm_1_1_r_a_p_l_platform_1_1m__buffer__index__s.html" title="structure to hold buffer indicies for platform signals. " alt="" coords="299,292,453,331"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im..." alt="" coords="154,317,272,344"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="143,219,283,245"/>
+<area shape="rect" id="node4" href="$structgeopm_1_1_platform_imp_1_1m__msr__batch__array.html" title="geopm::PlatformImp\l::m_msr_batch_array" alt="" coords="5,113,149,154"/>
+<area shape="rect" id="node5" href="$structgeopm_1_1_platform_imp_1_1m__msr__batch__op.html" title="geopm::PlatformImp\l::m_msr_batch_op" alt="" coords="7,6,147,47"/>
+<area shape="rect" id="node6" href="$classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="175,120,345,147"/>
+<area shape="rect" id="node7" href="$structgeopm_1_1_r_a_p_l_platform_1_1m__buffer__index__s.html" title="structure to hold buffer indicies for platform signals. " alt="" coords="297,310,449,351"/>
 </map>

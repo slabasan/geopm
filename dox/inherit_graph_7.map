@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classgeopm_1_1_decider_factory.html" title="Factory object managing decider objects. " alt="" coords="5,5,165,31"/>
+<area shape="rect" id="node1" href="$classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. " alt="" coords="5,56,120,83"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_balancing_decider.html" title="Simple implementation of a power balancing tree decider. " alt="" coords="175,5,345,32"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_governing_decider.html" title="Simple implementation of a power governing leaf decider. " alt="" coords="173,56,347,83"/>
+<area shape="rect" id="node4" href="$classgeopm_1_1_static_policy_decider.html" title="Decider which does not update the policy. " alt="" coords="168,107,352,133"/>
 </map>

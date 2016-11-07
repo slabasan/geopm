@@ -1,6 +1,6 @@
 <map id="geopm::Platform" name="geopm::Platform">
-<area shape="rect" id="node2" href="$classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="146,205,287,231"/>
-<area shape="rect" id="node3" href="$structgeopm_1_1_platform_imp_1_1m__msr__batch__array.html" title="geopm::PlatformImp\l::m_msr_batch_array" alt="" coords="5,105,153,144"/>
-<area shape="rect" id="node4" href="$structgeopm_1_1_platform_imp_1_1m__msr__batch__op.html" title="geopm::PlatformImp\l::m_msr_batch_op" alt="" coords="8,5,150,44"/>
-<area shape="rect" id="node5" href="$classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="177,112,349,137"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="143,219,283,245"/>
+<area shape="rect" id="node3" href="$structgeopm_1_1_platform_imp_1_1m__msr__batch__array.html" title="geopm::PlatformImp\l::m_msr_batch_array" alt="" coords="5,113,149,154"/>
+<area shape="rect" id="node4" href="$structgeopm_1_1_platform_imp_1_1m__msr__batch__op.html" title="geopm::PlatformImp\l::m_msr_batch_op" alt="" coords="7,6,147,47"/>
+<area shape="rect" id="node5" href="$classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="175,120,345,147"/>
 </map>

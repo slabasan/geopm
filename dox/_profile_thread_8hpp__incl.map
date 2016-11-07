@@ -1,8 +1,8 @@
 <map id="src/ProfileThread.hpp" name="src/ProfileThread.hpp">
-<area shape="rect" id="node5" href="$_profile_8hpp.html" title="Profile.hpp" alt="" coords="475,79,560,104"/>
-<area shape="rect" id="node11" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="711,299,817,324"/>
-<area shape="rect" id="node15" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="447,225,582,251"/>
-<area shape="rect" id="node17" href="$_shared_memory_8hpp.html" title="SharedMemory.hpp" alt="" coords="50,152,187,177"/>
-<area shape="rect" id="node18" href="$_profile_table_8hpp.html" title="ProfileTable.hpp" alt="" coords="313,152,430,177"/>
-<area shape="rect" id="node21" href="$_sample_scheduler_8hpp.html" title="SampleScheduler.hpp" alt="" coords="688,225,840,251"/>
+<area shape="rect" id="node5" href="$_profile_8hpp.html" title="Profile.hpp" alt="" coords="473,80,556,107"/>
+<area shape="rect" id="node11" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="710,304,814,331"/>
+<area shape="rect" id="node15" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="448,229,579,256"/>
+<area shape="rect" id="node17" href="$_shared_memory_8hpp.html" title="SharedMemory.hpp" alt="" coords="50,155,184,181"/>
+<area shape="rect" id="node18" href="$_profile_table_8hpp.html" title="ProfileTable.hpp" alt="" coords="312,155,427,181"/>
+<area shape="rect" id="node21" href="$_sample_scheduler_8hpp.html" title="SampleScheduler.hpp" alt="" coords="687,229,836,256"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="geopm::Region" name="geopm::Region">
-<area shape="rect" id="node2" href="$classgeopm_1_1_circular_buffer.html" title="geopm::CircularBuffer\l\&lt; struct geopm_time_s \&gt;" alt="" coords="15,5,183,44"/>
-<area shape="rect" id="node3" href="$classgeopm_1_1_circular_buffer.html" title="geopm::CircularBuffer\l\&lt; std::vector\&lt; double \&gt; \&gt;" alt="" coords="15,68,184,107"/>
-<area shape="rect" id="node4" href="$structgeopm__sample__message__s.html" title="MPI message structure for sending sample telemetry data up the tree. " alt="" coords="5,132,193,157"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_circular_buffer.html" title="geopm::CircularBuffer\l\&lt; struct geopm_time_s \&gt;" alt="" coords="13,5,181,46"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_circular_buffer.html" title="geopm::CircularBuffer\l\&lt; std::vector\&lt; double \&gt; \&gt;" alt="" coords="12,70,183,111"/>
+<area shape="rect" id="node4" href="$structgeopm__sample__message__s.html" title="MPI message structure for sending sample telemetry data up the tree. " alt="" coords="5,137,189,164"/>
 </map>

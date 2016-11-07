@@ -205,11 +205,11 @@ ignored.</p></dd>
 -d cpu_mhz:2500,num_cpu_max_perf:4,affinity:scatter</p></dd>
 <dt>Create a configuration file for all processors to run at 75% of the Thermal Design Power:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m tdp_balance_static \ <br />
 -d tdp_percent:75</p></dd>
-<dt>Create a configuration file for global energy optimization with a per-node power budget of 300 Watts:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
+<dt>Create a configuration file for GEOPM with a per-node power budget of 300 Watts:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
 -d power_budget:300</p></dd>
-<dt>Create a configuration file for global energy optimization with a per-node power budget of 300 Watts and use a custom platform plugin:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
+<dt>Create a configuration file for GEOPM with a per-node power budget of 300 Watts and use a custom platform plugin:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
 -d power_budget:300,platform:broadwell_platform</p></dd>
-<dt>Create a configuration file for global energy optimization with a per-node power budget of 300 Watts and use custom decider plugins:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m dynamic \ <br />
+<dt>Create a configuration file for GEOPM with a per-node power budget of 300 Watts and use custom decider plugins:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m dynamic \ <br />
 -d power_budget:300,tree_decider:uniform_frequency,leaf_decider:max_efficiency</p></dd>
 <dt>Enforce a static policy defined in a preexisting configuration file:</dt><dd><p>$ geopmpolicy -e -f geopm.conf</p></dd>
 <dt>Enforce a static policy where all processors to run at 75% of the Thermal Design Power:</dt><dd><p>$ geopmpolicy -e -m tdp_balance_static -d tdp_percent:75</p></dd>
@@ -239,7 +239,7 @@ ignored.</p></dd>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>October 2016</li>
+    <li class='tc'>November 2016</li>
     <li class='tr'>geopmpolicy(1)</li>
   </ol>
 

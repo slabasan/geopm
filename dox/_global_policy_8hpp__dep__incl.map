@@ -1,7 +1,7 @@
 <map id="src/GlobalPolicy.hpp" name="src/GlobalPolicy.hpp">
-<area shape="rect" id="node2" href="$_tree_communicator_8hpp.html" title="src/TreeCommunicator.hpp" alt="" coords="85,79,267,104"/>
-<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="5,152,131,177"/>
-<area shape="rect" id="node5" href="$_tree_communicator_8cpp.html" title="src/TreeCommunicator.cpp" alt="" coords="194,152,375,177"/>
-<area shape="rect" id="node6" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="342,79,483,104"/>
-<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="6,225,131,251"/>
+<area shape="rect" id="node2" href="$_tree_communicator_8hpp.html" title="src/TreeCommunicator.hpp" alt="" coords="45,80,224,107"/>
+<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="5,155,131,181"/>
+<area shape="rect" id="node6" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="249,80,391,107"/>
+<area shape="rect" id="node5" href="$_tree_communicator_8cpp.html" title="src/TreeCommunicator.cpp" alt="" coords="278,155,457,181"/>
+<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="5,229,131,256"/>
 </map>

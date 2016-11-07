@@ -1,8 +1,8 @@
 <map id="src/TreeCommunicator.hpp" name="src/TreeCommunicator.hpp">
-<area shape="rect" id="node5" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="216,79,351,104"/>
-<area shape="rect" id="node11" href="$_global_policy_8hpp.html" title="GlobalPolicy.hpp" alt="" coords="563,79,684,104"/>
-<area shape="rect" id="node7" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="329,152,435,177"/>
-<area shape="rect" id="node15" href="$geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="748,152,864,177"/>
-<area shape="rect" id="node16" href="$_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="888,152,1004,177"/>
-<area shape="rect" id="node17" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="889,225,1003,251"/>
+<area shape="rect" id="node5" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="219,80,351,107"/>
+<area shape="rect" id="node11" href="$_global_policy_8hpp.html" title="GlobalPolicy.hpp" alt="" coords="568,80,688,107"/>
+<area shape="rect" id="node7" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="333,155,437,181"/>
+<area shape="rect" id="node15" href="$geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="753,155,865,181"/>
+<area shape="rect" id="node16" href="$_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="891,155,1005,181"/>
+<area shape="rect" id="node17" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="891,229,1004,256"/>
 </map>
