@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <dt><a class="anchor" id="_todo000003"></a>Member <a class="el" href="classgeopm_1_1_platform_topology.html#a69a0106e1a1f49efb65c0d628120dbd6">geopm::PlatformTopology::num_domain</a>  (int domain_type) const </dt>
 <dd>: This assumes that tiles are just below package in hwloc hierarchy. If tiles are at L2 cache, but processor has an L3 cache, this may not be correct.  </dd>
 <dt><a class="anchor" id="_todo000002"></a>Member <a class="el" href="classgeopm_1_1_platform_topology.html#a5085bcdd550b0c70ff376029407d09af">geopm::PlatformTopology::~PlatformTopology</a>  ()</dt>
-<dd>: This was failing internally on Catalyst. Need to debug. Thre is a ptr=malloc(0); free(ptr); in hwloc which alarmed ElectricFence  </dd>
+<dd>: This was failing internally on Catalyst. Need to debug. Thre is a ptr=malloc(0); free(ptr); in hwloc which alarmed ElectricFence.  </dd>
 <dt><a class="anchor" id="_todo000004"></a>Member <a class="el" href="classgeopm_1_1_profile.html#a19d1064314b81f776363d8bbc08c2993">geopm::Profile::region</a>  (const std::string region_name, long policy_hint)</dt>
 <dd>Record policy hint when registering a region.  </dd>
 <dt><a class="anchor" id="_todo000005"></a>Member <a class="el" href="classgeopm_1_1_sample_regulator.html#a23064c675c590bb85188feb72551456f">geopm::SampleRegulator::align</a>  (const struct <a class="el" href="structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. ">geopm_time_s</a> &amp;timestamp)</dt>
